@@ -7,7 +7,7 @@ const Button = ({ text, onClick, icon }) => {
     // Reusable button
     <a href="#"
       onClick={onClick}
-      className="flex items-center gap-2 border border-green-500 text-green-500 px-4 py-2 rounded-full hover:bg-green-500 hover:text-white transition"
+      className="flex items-center gap-2 border border-green-500 text-green-500 px-4 py-2 rounded-full hover:bg-green-500 hover:text-white transition w-fit"
     >
       {icon && <img src={Icon} alt="" className="w-4 h-4" />} {/* SVG icon */}
       <span>{text}</span>
