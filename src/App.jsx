@@ -2,6 +2,7 @@ import './App.css'
 import Footer from './Components/Footer'
 import Header from './Components/Header'
 import Hero from './Components/Hero'
+import Mission from './Components/Mission'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
     <>
       <Header />
       <Hero />
+      <Mission />
       <Footer />
     </>
   )
