@@ -1,7 +1,7 @@
 import React from "react";
-import heroBg from "../assets/images/Hero bg.webp";
-import icon from "../assets/icons/SVG.svg";
-import Button from "../Components/Buttons/Button";
+import heroBg from "../../assets/images/Hero bg.webp";
+import icon from "../../assets/icons/SVG.svg";
+import Button from "../../Components/Buttons/Button";
 
 const Hero = () => {
   return (

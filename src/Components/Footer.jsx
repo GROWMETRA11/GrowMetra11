@@ -39,8 +39,8 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="w-full bg-[#1A1A1A] text-gray-500 px-6 md:px-12 lg:px-20 xl:px-[277px] py-20">
-      <section className="max-w-[1152px] mx-auto">
+    <footer className="w-full bg-[#1A1A1A] text-gray-500 px-6 md:px-12 lg:px-20 py-20">
+      <section className="max-w-[1152px] w-full mx-auto">
         <div className="flex flex-col lg:flex-row justify-between gap-12">
           {/* Logo & Description */}
           <div className="w-full lg:w-[250px]">
