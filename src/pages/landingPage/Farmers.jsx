@@ -18,7 +18,7 @@ const Farmers = () => {
   ]
 
   return (
-    <section className="w-full py-[96x] px-3">
+    <section className="w-full py-[96px] px-3">
       <div className=" max-w-[1152px] w-full mx-auto ">
         <h2 className="max-w-[550px] mx-auto font-bold text-[60px] leading-[60px] mb-[13px]">
           Built for Farmers. Trusted by Buyers.
@@ -56,11 +56,11 @@ const Farmers = () => {
                 </div>
           ))}
         </div>
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col items-center justify-center ">
            <p className="text-center font-normal text-[18px] mb-6">See what's available in the marketplace right now</p>
            <Button
           icon
-          text="Explore Marketplace"  
+          text="Explore Marketplace" 
           /> 
         </div>
       </div>

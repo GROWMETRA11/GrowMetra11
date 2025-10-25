@@ -4,6 +4,7 @@ import Hero from "./Hero";
 import Farmers from "./Farmers";
 import Footer from "../../Components/Footer";
 import Mission from "./Mission";
+import Journey from "./Journey";
 
 const LandingPage = () => {
   return (
@@ -12,6 +13,7 @@ const LandingPage = () => {
       <Hero />
       <Mission />
       <Farmers />
+      <Journey />
       <Footer />
     </>
   );
