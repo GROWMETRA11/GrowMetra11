@@ -34,7 +34,7 @@ const Journey = () => {
           <h2 className="font-bold text-6xl leading-[60px] mb-6">
             Your Journey Stats Here
           </h2>
-          <p className="inter font-normal text-md leading-[32.5px]">
+          <p className="inter font-normal text-md leading-[32.5px] mb-20">
             Three simple steps to transform how you trade{" "}
           </p>
         </div>
