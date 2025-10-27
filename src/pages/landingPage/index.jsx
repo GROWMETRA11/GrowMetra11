@@ -9,6 +9,8 @@ import Mission from "./Mission";
 import Journey from "./Journey";
 import TestimonialSection from "./TestimonialSection";
 
+
+
 const LandingPage = () => {
   return (
     <>
@@ -17,6 +19,7 @@ const LandingPage = () => {
       <Mission />
       <Farmers />
       <Journey />
+      
       <TestimonialSection />
       <FAQSection />
       <Harvest />
