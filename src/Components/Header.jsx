@@ -10,12 +10,12 @@ const Header = () => {
   const buttons = [
     {
       text: "Login",
-      href: "#",
+      href: "/login",
       className: "text-gray-500 text-sm hover:text-green-500 transition",
     },
     {
       text: "Sign Up",
-      href: "#",
+      href: "/register",
       className:
         "px-4 py-2 rounded-full border text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition",
     },

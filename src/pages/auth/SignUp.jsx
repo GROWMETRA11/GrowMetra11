@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import farmers from "../../assets/images/Nierian farmers working together.jpg";
 import GoogleIcon from "../../Components/iconComponent/Google.jsx";
 import X from "../../Components/iconComponent/X.jsx";
 import Instagram from "../../Components/iconComponent/Instagram.jsx";
+import { Eye, EyeOff } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const SignUp = () => {
+  const navigate = useNavigate()
+const [showPassword,setShowPassword] = useState(false);
+
   return (
     <section className="flex w-full mx-auto h-screen">
       
@@ -27,10 +32,10 @@ const SignUp = () => {
       </div>
 
       { /* Right Side */ }
-      <div className="w-full max-w-1/2 mx-auto flex justify-center items-center bg-white">
+      <div className="w-full px-3 lg:max-w-1/2 mx-auto flex justify-center items-center bg-white">
       <div className="max-w-[448px] mx-auto w-full h-screen py-[106px] overflow-y-auto no-scrollbar">
-        <div className="flex items-center gap-2 mb-8">
-            <svg
+        <div onClick={() => navigate("/")} className="flex items-center gap-2 mb-8">
+            <svg 
               width="16"
               height="16"
               viewBox="0 0 16 16"
@@ -86,20 +91,44 @@ const SignUp = () => {
 { /* Form */ }
           <form action="">
             <div>
-              <label htmlFor="Fname" id="Fname" > Full Name </label> <br />
-              <input className=" w-full h-12 px-[13px] py-[15.5px] border-1 border-gray-300 rounded-lg" type="text" name="Fname" id="Fname" placeholder="John Doe" />
+              <label htmlFor="Fname" id="Fname"  > Full Name </label> <br />
+              <input className=" w-full h-12 px-[13px] py-[15.5px] border-2 border-gray-400 rounded-lg mt-2 mb-5 " type="text" name="Fname" id="Fname" placeholder="John Doe" />
             </div>
             <div>
-              <label htmlFor="email" id="email" > Email Address </label> <br />
-              <input className=" w-full h-12 px-[13px] py-[15.5px] border-1 border-gray-300 rounded-lg" type="email" name="email" id="email" placeholder="you@example.com" />
+              <label htmlFor="email" name="email" id="email"> Email Address </label> <br />
+              <input className=" w-full h-12 px-[13px] py-[15.5px] border-2 border-gray-400 rounded-lg mt-2 mb-5" type="email" name="email" id="email" placeholder="you@example.com" />
             </div>
             <div>
-              <label htmlFor="Fname" id="Fname" > Phone Number </label> <br />
-              <input className=" w-full h-12 px-[13px] py-[15.5px] border-1 border-gray-300 rounded-lg" type="number" name="Fname" id="Fname" placeholder=" +234 800 000 0000" />
+              <label htmlFor="phone" id="phone"  > Phone Number </label> <br />
+              <input className=" w-full h-12 px-[13px] py-[15.5px] border-2 border-gray-400 rounded-lg mt-2 mb-5" type="number" name="phone" id="phone" placeholder=" +234 800 000 0000" />
             </div>
-            <div>
-              <label htmlFor="Fname" id="Fname" > Password </label> <br />
-              <input className=" w-full h-12 px-[13px] py-[15.5px] border-1 border-gray-300 rounded-lg" type="password" name="Fname" id="Fname" />
+            <div className="relative">
+              <label htmlFor="password" id="password" > Password </label> <br />
+              <input className=" w-full h-12 px-[13px] py-[15.5px] border-2 border-gray-400 rounded-lg mt-2 mb-5" type={showPassword ? "text" : "password"} name="password" id="password" placeholder="••••••••" />
+              <button type="button" onClick={() => setShowPassword(!showPassword)} className="absolute right-4 top-[47px]"> {showPassword ? <EyeOff size={18}/> : <Eye size={18}/> } </button>
+            </div>
+            <div className="relative">
+              <label htmlFor="" className="inter font-medium"> I am a </label><br />
+              <select name="" id="" className="w-full h-12 px-[21px] py-[14px] border-2 border-gray-400 rounded-lg mb-5 mt-2 text-[16px] font-normal leading-[20px]">
+                <option value="">Select a role</option>
+                <option value="farmer">Farmer</option>
+                <option value="buyer">Buyer</option>
+              </select>
+               {/* Custom arrow */}
+  <svg
+    class="absolute right-5 top-14 -translate-y-1/2 w-6 h-6 appearance-none text-gray-500 pointer-events-none"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    viewBox="0 0 24 24"
+  >
+    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+  </svg>
+            </div>
+            <button type="submit" className="w-full h-12 py-[14px] bg-green-400 text-white rounded-lg mb-[34px] text-[16px] inter font-medium leading-[24px]"> Create Account</button>
+            <div className="flex justify-center items-center space-x-1 inter font-normal text-[16px]">
+              <p>Already have an account?</p>
+              <a href="/login" className="text-green-500">Log in</a>
             </div>
           </form>
       </div>
