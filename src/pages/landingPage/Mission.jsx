@@ -31,7 +31,7 @@ const Mission = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="bg-gradient-to-t from-gray-700 to-gray-200 max-w-[1152px] mx-auto px-12 pt-[244px] pb-[54px] text-white rounded-2xl mb-[64px]"
+          className="bg-gradient-to-t from-gray-700 to-gray-200 max-w-[1152px] mx-auto px-12 py-8 lg:pt-[244px] pb-[54px] text-white rounded-2xl mb-[64px]"
         >
           <h3 className="max-w-[982.8px] font-bold text-2xl md:text-4xl mb-5 leading-[48px] lg:text-4xl">
             We understand your journey because we've walked it too

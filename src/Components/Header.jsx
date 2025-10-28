@@ -36,7 +36,7 @@ const Header = () => {
         </div>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex gap-6 items-center inter font-normal">
+        <nav className="hidden lg:flex ml-35 gap-6 items-center inter font-normal">
           {navBar.map((item, index) => (
             <a
               key={index}
@@ -93,7 +93,7 @@ const Header = () => {
               </a>
             ))}
           </nav>
-          <div className="flex flex-col gap-4">
+          <div className=" flex flex-col gap-4 w-fit">
             {buttons.map((btn, index) => (
               <a key={index} href={btn.href} className={btn.className}>
                 {btn.text}

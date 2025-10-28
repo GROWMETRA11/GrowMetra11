@@ -4,6 +4,7 @@ import topDesign from "../../assets/images/Image.png";
 import number1 from "../../assets/icons/Background+Shadow.svg";
 import number2 from "../../assets/icons/Background+Shadow (1).svg";
 import number3 from "../../assets/icons/Background+Shadow (2).svg";
+import number4 from "../../assets/images/Nigerian farmer using smartphone.webp"
 
 const Journey = () => {
   const textNum = [
@@ -92,15 +93,21 @@ const Journey = () => {
         </motion.div>
 
         {/* Bottom section */}
-        <div className="flex flex-col md:flex-row justify-center items-center text-white gap-6 md:gap-10">
-          <motion.div
-            className="w-[512px] h-[512px] rounded-xl shadow-lg bg-gray-300"
+        <div className="flex flex-col lg:flex-row  justify-center items-center text-white  gap-6">
+          <motion.div 
+            className="w-[512px] h-[512px] rounded-xl shadow-lg"
             variants={fadeLeft}
             transition={{ duration: 0.8 }}
-          ></motion.div>
+          >
+            <img
+    src={number4}
+    alt="farmer with phone"
+    className="w-full h-full px-3 object-center object-cover rounded-xl"
+  />
+          </motion.div>
 
           <motion.div
-            className="bg-green-500 w-[512px] h-[512px] rounded-xl shadow-lg px-12 py-[150px]"
+            className="bg-green-500  max-w-[512px] h-[512px] rounded-xl shadow-lg px-12 py-[75px] lg:py-[150px]"
             variants={fadeRight}
             transition={{ duration: 0.8 }}
           >

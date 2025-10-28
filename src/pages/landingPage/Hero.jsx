@@ -37,7 +37,7 @@ const Hero = () => {
       >
         {/* Heading */}
         <motion.h1
-          className="font-bold text-5xl md:text-[72px] text-center mb-4"
+          className="font-bold text-5xl md:text-[72px] pt-20 text-center mb-4"
           variants={fadeUp}
           transition={{ duration: 0.8 }}
         >
@@ -58,7 +58,7 @@ const Hero = () => {
 
         {/* Buttons */}
         <motion.div
-          className="flex justify-center items-center gap-4 mb-10"
+          className="flex justify-center items-center flex-wrap gap-4 mb-10"
           variants={fadeUp}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
