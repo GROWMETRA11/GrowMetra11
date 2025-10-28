@@ -37,7 +37,7 @@ const Hero = () => {
       >
         {/* Heading */}
         <motion.h1
-          className="font-bold text-5xl md:text-[72px] pt-20 text-center mb-4"
+          className="font-bold text-5xl md:text-[72px] pt-15 text-center mb-4"
           variants={fadeUp}
           transition={{ duration: 0.8 }}
         >

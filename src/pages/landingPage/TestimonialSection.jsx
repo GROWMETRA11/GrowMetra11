@@ -141,7 +141,7 @@ const TestimonialSection = () => {
 
       {/* Bottom Section */}
       <motion.p
-        className="text-center mb-6"
+        className="text-center px-6 mb-6"
         variants={fadeUp}
         custom={0.5}
       >

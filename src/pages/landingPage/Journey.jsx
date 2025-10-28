@@ -93,21 +93,21 @@ const Journey = () => {
         </motion.div>
 
         {/* Bottom section */}
-        <div className="flex flex-col lg:flex-row  justify-center items-center text-white  gap-6">
+        <div className="flex flex-col lg:flex-row mx-3  justify-center items-center text-white  gap-6">
           <motion.div 
-            className="w-[512px] h-[512px] rounded-xl shadow-lg"
+            
             variants={fadeLeft}
             transition={{ duration: 0.8 }}
           >
             <img
     src={number4}
     alt="farmer with phone"
-    className="w-full h-full px-3 object-center object-cover rounded-xl"
+    className="w-[512px] h-[512px] px- object-center object-cover rounded-xl"
   />
           </motion.div>
 
           <motion.div
-            className="bg-green-500  max-w-[512px] h-[512px] rounded-xl shadow-lg px-12 py-[75px] lg:py-[150px]"
+            className="bg-green-500  max-w-[512px] min-h-[512px] mx-auto rounded-xl shadow-lg px-5 lg:px-12 py-[75px] lg:py-[150px]"
             variants={fadeRight}
             transition={{ duration: 0.8 }}
           >
