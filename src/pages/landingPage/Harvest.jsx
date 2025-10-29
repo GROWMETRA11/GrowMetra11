@@ -40,15 +40,15 @@ const Harvest = () => {
 
         {/* Buttons */}
         <motion.div
-          className="flex justify-center items-center gap-3"
+          className="flex justify-center items-center gap-3 flex-wrap"
           variants={fadeUp}
           transition={{ delay: 0.3, duration: 0.6 }}
         >
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Btn className="bg-green-400 text-white" text="Start Your Journey" />
+            <Btn className="bg-green-400 mb-3  text-white" text="Start Your Journey" />
           </motion.div>
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Btn icon text="Browse Marketplace" />
+            <Btn className="mb-3" icon text="Browse Marketplace" />
           </motion.div>
         </motion.div>
       </motion.div>

@@ -5,7 +5,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 
 const GrowNigeriaFuture = () => {
 
-  
+
   // Scroll-based parallax animation
   const { scrollY } = useScroll();
   const y = useTransform(scrollY, [0, 800], [0, 120]); 
@@ -79,6 +79,7 @@ const GrowNigeriaFuture = () => {
           Join a community that's building the future of agriculture, one
           connection at a time.
         </motion.p>
+        
 
         {/*  Buttons */}
         <motion.div

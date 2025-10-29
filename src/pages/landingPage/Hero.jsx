@@ -6,6 +6,7 @@ import Button from "../../Components/Buttons/Button";
 import verify from "../../assets/icons/verify icon.svg";
 import secure from "../../assets/icons/secure payment icon.svg";
 import fair from "../../assets/icons/fair pricing icon.svg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
   const safeties = [
@@ -13,6 +14,8 @@ const Hero = () => {
     { id: secure, text: "Secure Payments" },
     { id: fair, text: "Fair Pricing" },
   ];
+
+  const navigate = useNavigate()
 
   // animation variants
   const fadeUp = {
@@ -34,7 +37,7 @@ const Hero = () => {
       >
         {/* Heading */}
         <motion.h1
-          className="font-bold text-5xl md:text-[72px] text-center mb-4"
+          className="font-bold text-5xl md:text-[72px] pt-15 text-center mb-4"
           variants={fadeUp}
           transition={{ duration: 0.8 }}
         >
@@ -55,12 +58,13 @@ const Hero = () => {
 
         {/* Buttons */}
         <motion.div
-          className="flex justify-center items-center gap-4 mb-10"
+          className="flex justify-center items-center flex-wrap gap-4 mb-10"
           variants={fadeUp}
           transition={{ delay: 0.3, duration: 0.7 }}
         >
           <motion.div whileHover={{ scale: 1.05 }}>
             <Button
+              onClick={() => navigate("/register")}
               text="Sign Up Now"
               className="text-white bg-green-500 hover:bg-transparent border border-green-500 hover:text-green-500 transition-all duration-300"
             />
