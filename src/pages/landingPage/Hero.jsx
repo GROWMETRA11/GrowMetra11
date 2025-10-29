@@ -74,7 +74,7 @@ const Hero = () => {
             <Button
               text="Explore Marketplace"
               icon={icon}
-              onClick={() => alert("Clicked!")}
+              onClick={() => navigate("/MarketPlacePage")}
             />
           </motion.div>
         </motion.div>

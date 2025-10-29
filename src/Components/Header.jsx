@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg";
 import { FiMenu, FiX } from "react-icons/fi"; // For menu icon
 
-const Header = () => {
+const Header = ({showButton = true}) => {
   const navBar = ["About", "Features", "How it works", "Stories", "FAQs"];
   const [active, setActive] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const Header = () => {
     },
     {
       text: "Visit Marketplace",
-      href: "#",
+      href: "/marketPlacePage",
       className:
         "px-4 py-2 rounded-full bg-green-500 text-white text-sm hover:opacity-90 transition",
     },
