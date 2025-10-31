@@ -6,6 +6,7 @@ import vegetables from "../../assets/icons/vegetables.svg";
 import fruits from "../../assets/icons/fruits.svg";
 import investment from "../../assets/icons/investments.svg";
 import CategoryCards from "../../Components/Cards/CategoryCards";
+import ArrowForward from "../../Components/iconComponent/ArrowForward";
 
 const CategorySection = () => {
   return (
@@ -61,6 +62,15 @@ const CategorySection = () => {
             border="border-[#E9D4FF]"
           />
         </div>
+          <div className="flex justify-center items-center mt-[64px]">
+            <a
+            className="px-5 py-[22px] flex mx-auto items-center gap-2 border-1 rounded-full bg-[#4CAF50] text-white"
+            href=""
+          >
+            Explore all Listings <ArrowForward />          
+          </a>
+          </div>
+        
       </div>
     </section>
   );

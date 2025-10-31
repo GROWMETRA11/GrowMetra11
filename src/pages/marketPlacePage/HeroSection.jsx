@@ -13,7 +13,7 @@ const HeroSection = () => {
 
   return (
     <>
-    <section className="w-full h-[1020px] px-5 flex justify-center items-center bg-[linear-gradient(to_bottom_right,_#D1EBD2_45%,_#FFFFFF_55%,_#FFFACF_65%)] py-[96px] lg:py-[105px] ">
+    <section className="w-full h-[1020px] mx-auto px-5 flex justify-center items-center bg-[linear-gradient(to_bottom_right,_#D1EBD2_45%,_#FFFFFF_55%,_#FFFACF_65%)] py-[96px] lg:py-[105px] ">
       <div className="max-w-[1024px] mx-auto text-center   ">
         <p className="inter font-semibold text-[14px]  max-w-[241px] mb-[23px] mx-auto px-6 py-2 bg-[#4CAF501A] text-[#4CAF50] rounded-full leading-5">
           EXPLORE WITHOUT LIMITS
@@ -34,7 +34,8 @@ const HeroSection = () => {
             className="px-5 py-[22px] flex items-center gap-2 border-1 rounded-full bg-[#4CAF50] text-white"
             href=""
           >
-            Browse MarketPlace <ArrowForward />          </a>
+            Browse MarketPlace <ArrowForward />          
+          </a>
           <a className="px-10 py-[22px] text-[#4CAF50] border rounded-full bg-white" href="">
             Create Account 
           </a>
@@ -54,7 +55,7 @@ const HeroSection = () => {
       </div>
       
     </section> 
-      <div className="w-full max-w-3xl mx-auto my-20 flex items-center bg-white border border-gray-200 rounded-2xl shadow-sm px-4 py-4 space-x-3">
+      <div className="w-full max-w-3xl mx-auto my-20  flex items-center bg-white border border-gray-200 rounded-2xl shadow-sm px-4 py-4 space-x-3">
       {/* Search Input */}
       <div className="flex items-center flex-1 space-x-2">
         <Search size={18} className="text-gray-400" />
