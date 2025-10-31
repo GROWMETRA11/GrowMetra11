@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import logo from "../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg";
 import { FiMenu, FiX } from "react-icons/fi"; // For menu icon
 
-const Header = ({showButton = true}) => {
+const Header = () => {
   const navBar = ["About", "Features", "How it works", "Stories", "FAQs"];
   const [active, setActive] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);

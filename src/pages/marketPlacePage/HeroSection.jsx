@@ -14,16 +14,16 @@ const HeroSection = () => {
   return (
     <>
     <section className="w-full h-[1020px] mx-auto px-5 flex justify-center items-center bg-[linear-gradient(to_bottom_right,_#D1EBD2_45%,_#FFFFFF_55%,_#FFFACF_65%)] py-[96px] lg:py-[105px] ">
-      <div className="max-w-[1024px] mx-auto text-center   ">
+      <div className="max-w-[1024px] pt-25 lg:pt-0 mx-auto text-center   ">
         <p className="inter font-semibold text-[14px]  max-w-[241px] mb-[23px] mx-auto px-6 py-2 bg-[#4CAF501A] text-[#4CAF50] rounded-full leading-5">
           EXPLORE WITHOUT LIMITS
         </p>
-        <div className="font-bold text-[40px] lg:text-8xl mx-auto w-[908px] leading-[50px] lg:leading-[106px]">
+        <div className="font-bold text-[40px] lg:text-8xl mx-auto max-w-[908px] leading-[50px] lg:leading-[106px]">
         
           <div className=""> Nigeria's Premier</div>
           <div className="text-green-500">Agriculture Marketplace</div>
         </div>
-        <p className="inter max-w-[720px] mx-auto leading-[39px] font-light mb-[53px] text-2xl text-[#4A5565]">
+        <p className="inter max-w-[350px] md:max-w-[768px] w-full  mx-auto leading-[39px] font-light mb-[53px] text-2xl text-[#4A5565]">
           Connect with verified farmers, discover quality produce, and invest in
           sustainable agriculture — all in one seamless platform.
         </p>

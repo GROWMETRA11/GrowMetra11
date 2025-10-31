@@ -10,7 +10,7 @@ import ArrowForward from "../../Components/iconComponent/ArrowForward";
 
 const CategorySection = () => {
   return (
-    <section className="w-full bg-gradient-to-b from-[#FFFFFF] to-[#F9FAFB]  px-5 lg:p-0 flex justify-center items-center">
+    <section className="w-full bg-gradient-to-b from-[#FFFFFF] to-[#F9FAFB]  px-5  flex justify-center items-center">
       <div className="max-w-[1152px] py-[96px] w-full  mx-auto">
         <h2 className="font-bold text-center text-6xl mb-4 ">
           Explore Categories

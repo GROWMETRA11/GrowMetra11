@@ -4,6 +4,7 @@ import HeroSection from './HeroSection'
 import CategorySection from './CategorySection'
 import ProductSection from './ProductSection'
 import MarketInsightSection from './MarketInsightSection'
+import Footer from "../../Components/Footer"
 
 const MarketPlacePage = () => {
   return (
@@ -13,6 +14,7 @@ const MarketPlacePage = () => {
     <CategorySection />
     <ProductSection />
     <MarketInsightSection />
+    <Footer />
     </>
   )
 }

@@ -85,7 +85,7 @@ const ProductSection = () => {
         <p className="inter text-[18px] text-center font-light mb-16">
           Quality produce from verified farmers across Nigeria
         </p>
-     <div className="grid max-w-[1280px]  mx-auto w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-5 lg:p-0"> 
+     <div className="grid max-w-[1280px]  mx-auto w-full grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-5 "> 
       {products.map((item) => (
         <div
           key={item.id}
