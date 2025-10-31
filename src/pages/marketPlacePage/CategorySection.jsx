@@ -9,50 +9,56 @@ import CategoryCards from "../../Components/Cards/CategoryCards";
 
 const CategorySection = () => {
   return (
-    <section className="w-full bg-[#FCFCFD] min-h-[796px] flex justify-center items-center">
-      <div className="max-w-[1152px] min-h-[604px] mx-auto">
+    <section className="w-full bg-gradient-to-b from-[#FFFFFF] to-[#F9FAFB]  px-5 lg:p-0 flex justify-center items-center">
+      <div className="max-w-[1152px] py-[96px] w-full  mx-auto">
         <h2 className="font-bold text-center text-6xl mb-4 ">
           Explore Categories
         </h2>
         <p className="inter text-[18px] text-center font-light mb-16">
           Discover quality products organized by category
         </p>
-        <div className="grid  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  mt-6">
+        <div className="grid w-full  grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6  mt-6">
           <CategoryCards
             icon={crops}
             title="Crops"
             listings="1,240 listings"
-            bgColor=" bg-[#B9F8CF]"
+            bgColor=" bg-[#F0FDF4]"
+            border= "border-[#B9F8CF]"
           />
           <CategoryCards
             icon={livestock}
             title="Crops"
             listings="1,240 listings"
-            bgColor="bg-[#FEE685]"
+            bgColor="bg-[#FFFBEB]"
+            border="border-[#FEE685]"
           />
           <CategoryCards
             icon={vegetables}
             title="Crops"
             listings="1,240 listings"
-            bgColor="bg-[#FFC9C9]"
+            bgColor="bg-[#FFF7ED]"
+            border="border-[#FFD6A7]"
           />
           <CategoryCards
             icon={fruits}
             title="Crops"
             listings="1,240 listings"
-            bgColor="bg-[#FFD6A7]"
+            bgColor="bg-[#FEF2F2]"
+            border="border-[#FFC9C9]"
           />
           <CategoryCards
             icon={equipment}
             title="Crops"
             listings="1,240 listings"
-            bgColor="bg-[#BEDBFF]"
+            bgColor="bg-[#EFF6FF]"
+            border="border-[#BEDBFF]"
           />
           <CategoryCards
             icon={investment}
             title="Crops"
             listings="1,240 listings"
-            bgColor="bg-[#E9D4FF]"
+            bgColor="bg-[#FAF5FF]"
+            border="border-[#E9D4FF]"
           />
         </div>
       </div>

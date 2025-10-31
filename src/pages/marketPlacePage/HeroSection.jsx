@@ -12,15 +12,17 @@ const HeroSection = () => {
 
 
   return (
-    <section className="w-full h-[1020px] px-5 flex justify-center items-center bg-[linear-gradient(to_bottom_right,_#D1EBD2_45%,_#FFFFFF_55%,_#FFFACF_65%)] ">
+    <>
+    <section className="w-full h-[1020px] px-5 flex justify-center items-center bg-[linear-gradient(to_bottom_right,_#D1EBD2_45%,_#FFFFFF_55%,_#FFFACF_65%)] py-[96px] lg:py-[105px] ">
       <div className="max-w-[1024px] mx-auto text-center   ">
-        <p className="inter font-semibold text-[14px]  max-w-[241px] mb-[23px] mx-auto px-6 py-2 bg-green-100 text-green-500 rounded-full leading-5">
+        <p className="inter font-semibold text-[14px]  max-w-[241px] mb-[23px] mx-auto px-6 py-2 bg-[#4CAF501A] text-[#4CAF50] rounded-full leading-5">
           EXPLORE WITHOUT LIMITS
         </p>
-        <h1 className="font-bold text-[40px]  md:text-7xl mx-auto max-w-[748px] mb-[36px] leading-[50px] md:leading-[106px]  ">
-          Nigeria's Premier{" "}
-          <span className="text-green-500">Agriculture Marketplace</span>{" "}
-        </h1>
+        <div className="font-bold text-[40px] lg:text-8xl mx-auto w-[908px] leading-[50px] lg:leading-[106px]">
+        
+          <div className=""> Nigeria's Premier</div>
+          <div className="text-green-500">Agriculture Marketplace</div>
+        </div>
         <p className="inter max-w-[720px] mx-auto leading-[39px] font-light mb-[53px] text-2xl text-[#4A5565]">
           Connect with verified farmers, discover quality produce, and invest in
           sustainable agriculture — all in one seamless platform.
@@ -29,28 +31,30 @@ const HeroSection = () => {
         {/* Buttons */}
         <div className="flex flex-col md:flex-row mb-[48px] justify-center items-center gap-[15px]">
           <a
-            className="px-[17px] py-[22px] border-1 rounded-full bg-green-700 text-white"
+            className="px-5 py-[22px] flex items-center gap-2 border-1 rounded-full bg-[#4CAF50] text-white"
             href=""
           >
-            Browse MarketPlace {/* <ArrowForward /> */}
-          </a>
-          <a className="px-[50px] py-[21px] text-green-400 border rounded-full bg-green-100" href="">
+            Browse MarketPlace <ArrowForward />          </a>
+          <a className="px-10 py-[22px] text-[#4CAF50] border rounded-full bg-white" href="">
             Create Account 
           </a>
         </div>
 
         { /* Stats */  }
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-400 px-4">
+        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-center text-center divide-y md:divide-y-0 md:divide-x divide-gray-200 px-4">
         {stats.map((stat, index) => (
-          <div key={index} className="flex-1 px-6 py-4">
-            <h2 className="text-4xl md:text-5xl font-bold text-green-600">
+          <div key={index} className="flex-1 px-4 py-2">
+            <h2 className="text-4xl md:text-[40px] font-bold text-green-600">
               {stat.number}
             </h2>
             <p className="inter font-medium text-gray-700 text-lg mt-1">{stat.label}</p>
           </div>
         ))}
       </div>
-      <div className="w-full max-w-3xl flex items-center bg-white border border-gray-200 rounded-full shadow-sm px-4 py-2 space-x-3">
+      </div>
+      
+    </section> 
+      <div className="w-full max-w-3xl mx-auto my-20 flex items-center bg-white border border-gray-200 rounded-2xl shadow-sm px-4 py-4 space-x-3">
       {/* Search Input */}
       <div className="flex items-center flex-1 space-x-2">
         <Search size={18} className="text-gray-400" />
@@ -97,8 +101,7 @@ const HeroSection = () => {
         </svg>
       </div>
     </div>
-      </div>
-    </section>
+      </>
   );
 };
 
