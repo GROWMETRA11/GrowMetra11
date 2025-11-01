@@ -1,6 +1,6 @@
 import React from "react";
 import ArrowForward from "../../Components/iconComponent/ArrowForward";
-import { Search, MapPin, LayoutGrid } from "lucide-react"; // from lucide-react
+
 
 const HeroSection = () => {
 
@@ -12,9 +12,8 @@ const HeroSection = () => {
 
 
   return (
-    <>
     <section className="w-full h-[1020px] mx-auto px-5 flex justify-center items-center bg-[linear-gradient(to_bottom_right,_#D1EBD2_45%,_#FFFFFF_55%,_#FFFACF_65%)] py-[96px] lg:py-[105px] ">
-      <div className="max-w-[1024px] pt-25 lg:pt-0 mx-auto text-center   ">
+      <div className="max-w-[1024px] pt-25 md:pt-0 mx-auto text-center   ">
         <p className="inter font-semibold text-[14px]  max-w-[241px] mb-[23px] mx-auto px-6 py-2 bg-[#4CAF501A] text-[#4CAF50] rounded-full leading-5">
           EXPLORE WITHOUT LIMITS
         </p>
@@ -53,56 +52,8 @@ const HeroSection = () => {
         ))}
       </div>
       </div>
-      
     </section> 
-      <div className="w-full max-w-3xl mx-auto my-20  flex items-center bg-white border border-gray-200 rounded-2xl shadow-sm px-4 py-4 space-x-3">
-      {/* Search Input */}
-      <div className="flex items-center flex-1 space-x-2">
-        <Search size={18} className="text-gray-400" />
-        <input
-          type="text"
-          placeholder="Search for crops, produce, equipment..."
-          className="w-full outline-none text-sm text-gray-700 placeholder:text-gray-400"
-        />
-      </div>
-
-      {/* Divider */}
-      <div className="w-px h-6 bg-gray-200"></div>
-
-      {/* Location Dropdown */}
-      <div className="flex items-center space-x-1 cursor-pointer text-gray-600 hover:text-green-600">
-        <MapPin size={18} />
-        <span className="text-sm">Location</span>
-        <svg
-          className="w-4 h-4 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
-
-      {/* Divider */}
-      <div className="w-px h-6 bg-gray-200"></div>
-
-      {/* Category Dropdown */}
-      <div className="flex items-center space-x-1 cursor-pointer text-gray-600 hover:text-green-600">
-        <LayoutGrid size={18} />
-        <span className="text-sm">Category</span>
-        <svg
-          className="w-4 h-4 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="2"
-          viewBox="0 0 24 24"
-        >
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
-      </div>
-    </div>
-      </>
+    
   );
 };
 
