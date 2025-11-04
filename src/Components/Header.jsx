@@ -21,11 +21,11 @@ const Header = () => {
       text: "Sign Up",
       href: "/register",
       className:
-        "px-4 py-2 rounded-full border text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition",
+        "px-4 py-2 rounded-full border text-center text-sm border-green-500 text-green-500 hover:bg-green-500 hover:text-white transition",
     },
     {
       text: "Visit Marketplace",
-      href: "#",
+      href: "/marketPlacePage",
       className:
         "px-4 py-2 rounded-full bg-green-500 text-white text-sm hover:opacity-90 transition",
     },
@@ -85,7 +85,7 @@ const Header = () => {
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-white px-4 py-6 shadow-md">
+        <div className="lg:hidden h-screen bg-white px-4 py-6 shadow-md">
           <nav className="flex flex-col gap-4 mb-6">
             {navBar.map((item, index) => (
               <a
