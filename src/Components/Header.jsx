@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import logo from "../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg";
 import { FiMenu, FiX } from "react-icons/fi"; // For menu icon
+import AboutUs from "../pages/aboutPage/AboutUs";
+import { useNavigate } from "react-router-dom";
+
 
 const Header = () => {
   const navBar = ["About", "Features", "How it works", "Stories", "FAQs"];
   const [active, setActive] = useState("Home");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const buttons = [
     {
@@ -27,6 +31,14 @@ const Header = () => {
     },
   ];
 
+  // HELPER FUNCTION TO HANDLE NAVIGATION
+  const handleNavClick = (item) => {
+    setActive(item);
+    if (item === "About") {
+      navigate("/about");
+    }
+  };
+
   return (
     <header className="w-full fixed top-0 left-0 z-50 bg-white shadow-md">
       <section className="max-w-[1536px] mx-auto px-4 md:px-8 py-4 flex justify-between items-center">
@@ -41,7 +53,7 @@ const Header = () => {
             <a
               key={index}
               href="#"
-              onClick={() => setActive(item)}
+              onClick={() => handleNavClick(item)}
               className={`cursor-pointer text-sm transition duration-200 ${
                 active === item
                   ? "text-green-500 border-b-2 border-green-500"
@@ -80,7 +92,7 @@ const Header = () => {
                 key={index}
                 href="#"
                 onClick={() => {
-                  setActive(item);
+                  handleNavClick(item);
                   setIsMenuOpen(false);
                 }}
                 className={`text-base font-medium transition ${
