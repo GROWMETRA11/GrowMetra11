@@ -101,7 +101,7 @@ const LoginPage = () => {
               />
               <button
                 type="button"
-                onClick={() => setShowPassword(!showPassword)}
+                onClick={() => setShowPassword(prev => !prev)}
                 className="absolute right-4 top-[47px]"
               >
                 {" "}

@@ -1,0 +1,92 @@
+
+import NotificationIcon from '../../../../components/iconComponent/NotificationIcon'
+import ProfileIcon from '../../../../assets/images/ProfileImg.png'
+import Logo from '../../../../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg'
+import Home from '../../../../components/iconComponent/Home'
+import Market from '../../../../components/iconComponent/MarketIcon'
+import Orders from '../../../../components/iconComponent/OrdersIcon'
+import Wallet from '../../../../components/iconComponent/WalletIcon'
+import Cart from '../../../../components/iconComponent/Cart'
+import { Link, useLocation } from 'react-router-dom'
+
+
+
+const DashboardLayout = ({children}) => {
+    const location = useLocation()
+    const active = location.pathname
+    console.log(active)
+const dashBoardLink = [{
+    title: "Dashboard",
+
+    activeIcon: <Home color="#FFFFFF" />,
+    inActiveIcon: <Home color="#545454" />,
+    links: "/dashboard",
+},
+{
+    title: "Marketplace",
+    activeIcon:<Market  color="#FFFFFF" /> ,
+    inActiveIcon: <Market  color="#545454" />,
+    links: "/marketplace",
+},
+{
+    title: "Orders",
+    activeIcon: <Orders  color="#FFFFFF" />,
+    inActiveIcon: <Orders  color="#545454" />,
+    links: "/orders",
+},
+{
+    title: "Wallet",
+    activeIcon: <Wallet  color="#FFFFFF" />,
+    inActiveIcon: <Wallet  color="#545454" />,
+    links: "/wallet",
+},
+{
+    title: "Cart",
+    activeIcon: <Cart  color="#FFFFFF" />,
+    inActiveIcon: <Cart  color="#545454" />,
+    links: "/cart",
+},
+]
+
+
+
+  return (
+    <section>
+        {/* SideBar */ }
+        <div className='h-screen border-r border-r-[#0000001] shadow-md shadow-[#1B1C1D0]  max-w-[261px] bg-white '>
+            { /* Logo */ }
+            <div className='px-[41px] py-6 border-b border-b-[#0000001] '>
+                <img className='w-[90px]' src={Logo} alt="Logo" />
+            </div>
+            { /* Links */ }
+           <div >
+             {dashBoardLink.map((item,index) => (
+                <div key={index}  className=' px-5 py-3 mb-2 '>
+                    <Link className={`flex gap-3 p-2 items-center font-medium text-[18px] rounded-md ${active.split("/")[1].toLowerCase() === item.title.toLowerCase() ? "bg-green-500 text-white"
+                        : "text-gray-500 hover:bg-green-100 hover:text-green-500"
+                    }`}  to={item.links}>{active.split("/")[1].toLowerCase() === item.title.toLowerCase() ? item.activeIcon : item.inActiveIcon} {item.title}</Link>
+                </div>
+            ))}
+           </div>
+        </div>
+
+        { /* Header */}
+        <div className=' w-[calc(100%-261px)] border-b border-[#0000001] h-24 fixed p-6  top-0 left-[261px]'>
+            <div className='flex justify-between  items-center gap-5 h-full'>
+                <div className='w-[200px] h-full border text-center border-red-200'>Search Bar</div>
+                <div className='flex items-center gap-5'>
+                    <NotificationIcon />
+                    <img className='w-10' src={ProfileIcon} alt="ProfileIcon" />
+                </div>
+            </div>
+        </div>
+
+        { /* Contents */ }
+        <div className='h-screen p-6 overflow-y-auto w-[calc(100%-261px)] fixed top-24 left-[261px]'>
+            {children}
+        </div>
+    </section>
+  )
+}
+
+export default DashboardLayout
