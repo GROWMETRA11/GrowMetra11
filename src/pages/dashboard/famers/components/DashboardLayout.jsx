@@ -8,6 +8,7 @@ import Orders from '../../../../components/iconComponent/OrdersIcon'
 import Wallet from '../../../../components/iconComponent/WalletIcon'
 import Cart from '../../../../components/iconComponent/Cart'
 import { Link, useLocation } from 'react-router-dom'
+import SearchIcon from '../../../../components/iconComponent/SearchIcon'
 
 
 
@@ -53,9 +54,9 @@ const dashBoardLink = [{
   return (
     <section>
         {/* SideBar */ }
-        <div className='h-screen border-r border-r-[#0000001] shadow-md shadow-[#1B1C1D0]  max-w-[261px] bg-white '>
+        <div className='h-screen border-r-[0.2px] border-r-gray-400 shadow-md shadow-[#1B1C1D0]  max-w-[261px] bg-white '>
             { /* Logo */ }
-            <div className='px-[41px] py-6 border-b border-b-[#0000001] '>
+            <div className='px-[41px] py-6 border-b-[0.2px] border-b-gray-400 '>
                 <img className='w-[90px]' src={Logo} alt="Logo" />
             </div>
             { /* Links */ }
@@ -71,11 +72,14 @@ const dashBoardLink = [{
         </div>
 
         { /* Header */}
-        <div className=' w-[calc(100%-261px)] border-b border-[#0000001] h-24 fixed p-6  top-0 left-[261px]'>
+        <div className=' w-[calc(100%-261px)] border-b-[0.2px]  border-gray-400 h-24 fixed p-6  top-0 left-[261px]'>
             <div className='flex justify-between  items-center gap-5 h-full'>
-                <div className='w-[200px] h-full border text-center border-red-200'>Search Bar</div>
+                <div className='flex items-center gap-3 w-full max-w[516px] relative'>
+                    <SearchIcon className="mx-[15px]"  />
+                    <input className='absolute w-full max-w-[516px] px-[47px] py-[15px] border-box border border-gray-400 rounded-lg  outline-none ' type="text" placeholder='Search Products, sellers...' />
+                </div>
                 <div className='flex items-center gap-5'>
-                    <NotificationIcon />
+                    <NotificationIcon className="px-3" />
                     <img className='w-10' src={ProfileIcon} alt="ProfileIcon" />
                 </div>
             </div>
