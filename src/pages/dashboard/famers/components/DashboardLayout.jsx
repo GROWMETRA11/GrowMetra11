@@ -4,11 +4,12 @@ import ProfileIcon from '../../../../assets/images/ProfileImg.png'
 import Logo from '../../../../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg'
 import Home from '../../../../components/iconComponent/Home'
 import Market from '../../../../components/iconComponent/MarketIcon'
-import Orders from '../../../../components/iconComponent/OrdersIcon'
-import Wallet from '../../../../components/iconComponent/WalletIcon'
 import Cart from '../../../../components/iconComponent/Cart'
 import { Link, useLocation } from 'react-router-dom'
 import SearchIcon from '../../../../components/iconComponent/SearchIcon'
+import WalletIcon from '../../../../components/iconComponent/WalletIcon'
+import OrdersIcon from '../../../../Components/iconComponent/OrdersIcon'
+import MarketIcon from '../../../../components/iconComponent/MarketIcon'
 
 
 
@@ -25,20 +26,20 @@ const dashBoardLink = [{
 },
 {
     title: "Marketplace",
-    activeIcon:<Market  color="#FFFFFF" /> ,
-    inActiveIcon: <Market  color="#545454" />,
+    activeIcon:<MarketIcon  color="#FFFFFF" /> ,
+    inActiveIcon: <MarketIcon  color="#545454" />,
     links: "/marketplace",
 },
 {
     title: "Orders",
-    activeIcon: <Orders  color="#FFFFFF" />,
-    inActiveIcon: <Orders  color="#545454" />,
+    activeIcon: <OrdersIcon  color="#FFFFFF" />,
+    inActiveIcon: <OrdersIcon  color="#545454" />,
     links: "/orders",
 },
 {
     title: "Wallet",
-    activeIcon: <Wallet  color="#FFFFFF" />,
-    inActiveIcon: <Wallet  color="#545454" />,
+    activeIcon: <WalletIcon  color="#FFFFFF" />,
+    inActiveIcon: <WalletIcon  color="#545454" />,
     links: "/wallet",
 },
 {

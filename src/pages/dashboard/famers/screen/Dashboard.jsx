@@ -5,8 +5,15 @@ const Dashboard = () => {
   return (
     <DashboardLayout>
       { /* Text */ }
+      <div>
       <h2 className='font-normal text-3xl'>Welcome, Abdurrahman.</h2>
-      <p className='text-[16px] font-normal'> Your personalized marketplace dashboard </p>
+      <p className='text-[16px] font-normal mt-1'> Your personalized marketplace dashboard </p>
+      </div>
+
+      { /* Cards */ }
+      <div>
+        
+      </div>
     </DashboardLayout>
   )
 }
