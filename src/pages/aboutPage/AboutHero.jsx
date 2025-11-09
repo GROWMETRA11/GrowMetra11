@@ -21,7 +21,7 @@ const HeroSection = () => {
   return (
 
     <section
-      className="relative w-screen min-h-screen flex flex-col
+      className="relative w-full min-h-screen flex flex-col
        justify-center items-center text-white overflow-hidden"
 
       style={{
