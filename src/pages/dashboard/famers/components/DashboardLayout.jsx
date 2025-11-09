@@ -1,15 +1,14 @@
 
-import NotificationIcon from '../../../../components/iconComponent/NotificationIcon'
+import NotificationIcon from "../../../../Components/iconComponent/NotificationIcon"
 import ProfileIcon from '../../../../assets/images/ProfileImg.png'
 import Logo from '../../../../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg'
-import Home from '../../../../components/iconComponent/Home'
-import Market from '../../../../components/iconComponent/MarketIcon'
-import Cart from '../../../../components/iconComponent/Cart'
+import Home from '../../../../Components/iconComponent/Home'
+import Cart from '../../../../Components/iconComponent/Cart'
 import { Link, useLocation } from 'react-router-dom'
-import SearchIcon from '../../../../components/iconComponent/SearchIcon'
-import WalletIcon from '../../../../components/iconComponent/WalletIcon'
+import SearchIcon from '../../../../Components/iconComponent/SearchIcon'
+import WalletIcon from '../../../../Components/iconComponent/WalletIcon'
 import OrdersIcon from '../../../../Components/iconComponent/OrdersIcon'
-import MarketIcon from '../../../../components/iconComponent/MarketIcon'
+import MarketIcon from '../../../../Components/iconComponent/MarketIcon'
 
 
 
