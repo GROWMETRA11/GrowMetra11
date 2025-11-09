@@ -9,10 +9,12 @@ import MarketPlace from '../pages/dashboard/famers/screen/MarketPlace'
 import Orders from '../pages/dashboard/famers/screen/Orders'
 import Cart from '../pages/dashboard/famers/screen/Cart'
 import Wallet from '../pages/dashboard/famers/screen/Wallet'
+import AboutUs from '../pages/aboutPage/AboutUs'
+
 
 const AppRoutes = () => {
   return (
-    <BrowserRouter >
+
     <Routes>
         <Route path='/' element={<LandingPage/>}/>
         <Route path='/register' element={<SignUp/>}/>
@@ -23,8 +25,9 @@ const AppRoutes = () => {
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/wallet' element={<Wallet/>}/>
+        <Route path='/about' element={<AboutUs/>}/>
     </Routes>
-    </BrowserRouter>
+  
   )
 }
 
