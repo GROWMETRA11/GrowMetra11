@@ -9,6 +9,7 @@ import Maize from "../../../../assets/images/Maize.webp";
 import Banana from "../../../../assets/images/Banana.webp";
 import Apple from "../../../../assets/images/Apple.webp";
 import StarIcon from "../../../../Components/iconComponent/StarIcon"
+import ViewStore from "../../../../Components/Buttons/ViewStore";
 
 const Dashboard = () => {
   {
@@ -120,8 +121,9 @@ const Dashboard = () => {
   ]
 
   return (
-    <DashboardLayout>
+    <DashboardLayout className="relative">
       {/* Text */}
+      <div>
       <div>
         <h2 className="font-normal text-3xl">Welcome, Abdurrahman.</h2>
         <p className="text-[16px] font-normal mt-1">
@@ -187,9 +189,8 @@ const Dashboard = () => {
                     <p> {order.eta} </p>
                     </div>
 
-                    <div className=" pl-39 relative flex">
-                      <div className="bg-green-400  z-50 h-2 w-[272px] rounded-md "></div>
-                      <div className="bg-gray-400  h-2 w-[255px] rounded-md "></div>
+                    <div className=" ml-39 w-[527px] bg-gray-200 rounded-full h-2">
+                      <div className="bg-green-500 h-2 rounded-full " style={{width: "272px"}}></div>
                     </div>
               </div>
               
@@ -202,6 +203,49 @@ const Dashboard = () => {
           <h1>Recent Activity</h1>
         </div>
       </div>
+
+      { /* Bottom Line */ }
+      <div className="p-6 ">
+      <h2 className="font-bold">Top Rated Sellers</h2>
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 ">
+        {topRated.map((rate,index) => (
+          <div key={index} className="py-5 px-6 mb-30 shadow-lg">
+            <div className="flex justify-between">
+            {rate.name}
+            <div className="flex items-center gap-2 mb-2">
+              {rate.rating}
+              <StarIcon />
+            </div>
+            </div>
+            <div className="mb-2">
+            {rate.text}
+            </div>
+            <div className="mb-[13px]">
+            {rate.review}
+            </div>
+            <ViewStore className="text-base" />
+          </div>
+        ))}
+      </div>
+      
+      </div>
+      </div>
+
+           
+ {/* Support Button - Bottom Right */}
+ <div className="flex justify-end p-6">
+        <button className="bg-white rounded-full shadow-md px-4 py-2.5 flex items-center gap-2 hover:shadow-lg transition-shadow border border-gray-200">
+          <span className="font-medium text-gray-700 text-sm">Support</span>
+          <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center">
+            <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+        </button>
+      </div>
+    
+     
+     
     </DashboardLayout>
   );
 };
