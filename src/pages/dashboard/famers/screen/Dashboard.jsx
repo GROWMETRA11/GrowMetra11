@@ -10,6 +10,7 @@ import Banana from "../../../../assets/images/Banana.webp";
 import Apple from "../../../../assets/images/Apple.webp";
 import StarIcon from "../../../../Components/iconComponent/StarIcon"
 import ViewStore from "../../../../Components/Buttons/ViewStore";
+import { EyeClosed } from "lucide-react";
 
 const Dashboard = () => {
   {
@@ -150,7 +151,7 @@ const Dashboard = () => {
       {/* Recent Orders */}
       <div className="w-full flex gap-[41px] mt-6">
         {/*Left Items */}
-        <div className=" w-[65%] bg-white shadow-sm ">
+        <div className=" w-[65%]">
           {/* Text */}
           <div className="flex justify-between">
             <h2 className="text-2xl font-normal leading-[100%] text-black">
@@ -160,10 +161,10 @@ const Dashboard = () => {
           </div>
 
           {/* Images and other text */}
-          <div className="my-6 p-6 ">
+          <div className="my-6 p-6">
             {/* Mapped items */}
             {Orders.map((order, index) => (
-              <div key={index} className=" mb-6 ">
+              <div key={index} className=" mb-6 bg-white rounded-lg">
                 <div className="flex items-center gap-[11px]">
                   <img
                     className="w-36 object-cover"
@@ -189,7 +190,7 @@ const Dashboard = () => {
                     <p> {order.eta} </p>
                     </div>
 
-                    <div className=" ml-39 w-[527px] bg-gray-200 rounded-full h-2">
+                    <div className=" ml-39  max-w-[527px] bg-gray-200 rounded-full h-2">
                       <div className="bg-green-500 h-2 rounded-full " style={{width: "272px"}}></div>
                     </div>
               </div>
@@ -200,7 +201,69 @@ const Dashboard = () => {
 
         {/* Right Items */}
         <div className="w-[32%] mt-[15px]">
-          <h1>Recent Activity</h1>
+          <div className="p-6 bg-white rounded-lg ">
+            <h2 className="mb-[18px]">Recent Activity</h2>
+
+            <div>
+              <div className="flex items-center gap-2 flex-wrap mb-[31px]">
+                <div className="w-3 h-3 bg-[#4DABF5] rounded-full"></div>
+                <div>
+                  <p>Ordered delivered Successfully </p>
+                  <p>2 hours ago</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap mb-[31px]">
+                <div className="w-3 h-3 bg-[#4EBE54] rounded-full"></div>
+                <div>
+                  <p>Seller conformed your order</p>
+                  <p>5 hours ago</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap mb-[31px]">
+                <div className="w-3 h-3 bg-[#4DABF5] rounded-full"></div>
+                <div>
+                  <p>Payment processed</p>
+                  <p>Yesterday</p>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-2 flex-wrap ">
+                <div className="w-3 h-3 bg-[#4EBE54] rounded-full"></div>
+                <div>
+                  <p>Ordered placed</p>
+                  <p>2 days ago</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <ViewStore text="Browse Market" className="mb-4" />
+              <ViewStore text="View Cart" className=" border border-black rounded-lg" />
+            </div>
+
+            { /* Cards */ }
+            <div className="bg-green-500 py-[17px] px-6 text-white rounded-lg mt-[30px]">
+              <div className="flex justify-between items-center mb-4">
+                <p>Available Balance</p>
+                <EyeClosed />
+              </div>
+              <p className="mb-4 text-3xl font-medium">₦28,500</p>
+              <ViewStore text = "Add Funds" className="border bg-transparent border-white rounded-md" />
+            </div>
+
+            <div className="bg-green-500 py-[17px] px-6 text-white rounded-lg mt-4">
+              <div className="flex justify-between items-center mb-4">
+                <p>Escrow Summary</p>
+                <EyeClosed />
+              </div>
+              <p className="mb-4 text-3xl font-medium">₦12,500</p>
+              <p className="max-w-[309px] text-[16px]">₦12,500 currently held in escrow across 3 transactions.</p>
+              
+            </div>
+            
+          </div>
         </div>
       </div>
 
