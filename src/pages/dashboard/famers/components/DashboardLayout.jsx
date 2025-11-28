@@ -51,9 +51,12 @@ const dashBoardLink = [{
 },
 ]
 
+// const isMarketActive = active.split("/")[1].toLowerCase() === "market";
+
 
 
   return (
+
     <section className="h-screen flex">
     {/* SideBar */}
     <div className='border-r-[0.2px] flex flex-col h-screen border-r-gray-400 shadow-md shadow-[#1B1C1D0] max-w-[261px] w-[261px] bg-white fixed left-0 top-0'>
@@ -96,16 +99,20 @@ const dashBoardLink = [{
     
 
     {/* Header */}
-    <div className='w-[calc(100%-261px)] border-b-[0.2px] border-gray-400 h-24 fixed p-6 top-0 left-[261px] bg-white z-10'>
-        <div className='flex justify-between items-center gap-5 h-full'>
-            <div className='flex items-center gap-3 w-full max-w-[516px] relative'>
-                <SearchIcon className="absolute left-4 top-1/2 -translate-y-1/2" />
+    <div className='w-[calc(100%-261px)] border-b-[0.2px] border-gray-400 h-22 fixed p-6 top-0 left-[261px] bg-white z-10'>
+        <div className='flex justify-end items-center gap-5 h-full'>
+           {/*  <div className='flex items-center gap-3 w-full max-w-[516px] relative'>
+                <SearchIcon className="absolute h-[55px] left-4 top-1/2 -translate-y-1/2" />
                 <input 
                     className='w-full max-w-[516px] pl-[47px] pr-4 py-[15px] border border-gray-400 rounded-lg outline-none' 
                     type="text" 
                     placeholder='Search Products, sellers...' 
                 />
             </div>
+            <div className='flex items-center gap-5'>
+                <NotificationIcon className="px-3" />
+                <img className='w-10 h-10 rounded-full object-cover' src={ProfileIcon} alt="ProfileIcon" />
+            </div> */}
             <div className='flex items-center gap-5'>
                 <NotificationIcon className="px-3" />
                 <img className='w-10 h-10 rounded-full object-cover' src={ProfileIcon} alt="ProfileIcon" />
