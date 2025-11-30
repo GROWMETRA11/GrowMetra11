@@ -120,11 +120,15 @@ const MarketPlace = () => {
               key={index}
               className="border border-gray-300 rounded-lg shadow-xs"
             >
+              <div className="">
+              
               <img
                 src={product.image}
                 alt={product.name}
                 className="w-full h-[236px] rounded-t-lg object-cover "
               />
+              </div>
+
               <div className=" px-6 py-4">
                 <h2 className="mt-3 font-semibold text-[20px]">
                   {product.title}
@@ -138,6 +142,7 @@ const MarketPlace = () => {
                 </div>
 
                 <p className="text-gray-500">{product.seller}</p>
+              
 
                 <div className="flex justify-between items-center mt-[11px] mb-[25px]">
                   <p className="text-green-600 font-bold text-[18px]">
