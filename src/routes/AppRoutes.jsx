@@ -10,6 +10,8 @@ import Orders from '../pages/dashboard/famers/screen/Orders'
 import Cart from '../pages/dashboard/famers/screen/Cart'
 import Wallet from '../pages/dashboard/famers/screen/Wallet'
 import AboutUs from '../pages/aboutPage/AboutUs'
+import Logout from '../pages/dashboard/famers/screen/Logout'
+import Settings from '../pages/dashboard/famers/screen/Settings'
 
 
 const AppRoutes = () => {
@@ -25,6 +27,8 @@ const AppRoutes = () => {
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/wallet' element={<Wallet/>}/>
+        <Route path='/settings' element={<Settings/>}/>
+        <Route path='/logout' element={<Logout/>}/>
         <Route path='/about' element={<AboutUs/>}/>
     </Routes>
   

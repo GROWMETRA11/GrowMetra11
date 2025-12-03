@@ -49,6 +49,18 @@ const dashBoardLink = [{
     inActiveIcon: <Cart  color="#545454" />,
     links: "/cart",
 },
+{
+    title: "Settings",
+    activeIcon: <SettingsIcon  color="#FFFFFF" />,
+    inActiveIcon: <SettingsIcon  color="#545454" />,
+    links: "/settings",
+},
+{
+    title: "Log Out",
+    activeIcon: <LogoutIcon  color="#FFFFFF" />,
+    inActiveIcon: <LogoutIcon  color="#545454" />,
+    links: "/logout",
+},
 ]
 
 // const isMarketActive = active.split("/")[1].toLowerCase() === "market";
@@ -85,7 +97,7 @@ const dashBoardLink = [{
        </div>
        
        {/* Bottom - This will now stick to bottom */}
-        <div className="border-t-[0.2px] border-t-gray-400 py-4 mt-[7px]">
+       {/*  <div className="border-t-[0.2px] border-t-gray-400 py-4 mt-[7px]">
             <div className="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-green-100 hover:text-green-500 cursor-pointer rounded-md mx-5">
                 <SettingsIcon />
                 <p>Settings</p>
@@ -94,7 +106,7 @@ const dashBoardLink = [{
                 <LogoutIcon />
                 <p>Log out</p>
             </div>
-       </div>
+       </div> */}
     </div>
     
 
