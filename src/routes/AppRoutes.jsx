@@ -11,7 +11,8 @@ import Cart from '../pages/dashboard/famers/screen/Cart'
 import Wallet from '../pages/dashboard/famers/screen/Wallet'
 import AboutUs from '../pages/aboutPage/AboutUs'
 import Logout from '../pages/dashboard/famers/screen/Logout'
-import Settings from '../pages/dashboard/famers/screen/Settings'
+import Settings from '../pages/dashboard/famers/screen/settings/Settings'
+
 
 
 const AppRoutes = () => {
