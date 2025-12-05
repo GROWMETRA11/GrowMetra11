@@ -10,6 +10,7 @@ import OrdersIcon from "../../../../Components/iconComponent/OrdersIcon";
 import MarketIcon from "../../../../Components/iconComponent/MarketIcon";
 import SettingsIcon from "../../../../Components/iconComponent/SettingsIcon";
 import LogoutIcon from "../../../../Components/iconComponent/LogoutIcon";
+import SupportIcon from "../../../../Components/iconComponent/SupportIcon";
 
 const DashboardLayout = ({ children }) => {
   const location = useLocation();
@@ -163,7 +164,10 @@ const DashboardLayout = ({ children }) => {
 
       {/* Contents */}
       <div className="h-screen p-6 overflow-y-auto w-[calc(100%-261px)] fixed top-24 left-[261px] bg-gray-50">
-      <div className="fixed right-2 p-6 bottom-2 text-red-600">Support</div>
+      <div className="fixed right-2 px-[27.5px] py-[12.5px] bottom-2 border border-gray-300 rounded-full flex gap-2 items-center">
+        <p className="text-[20px] text-gray-600 font-normal">Support</p>
+        <SupportIcon />
+        </div>
         {children}
       </div>
     </section>
