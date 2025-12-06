@@ -58,6 +58,40 @@ const Settings = () => {
     },
   ];
 
+  const notifications = [
+    {
+      id: 1,
+      label: "Notification Preferences",
+      title: "Order Updates",
+      text: "Get notified when your order status changes"
+    },
+    {
+      id: 2,
+      title: "Delivery Alerts",
+      text: "Receive alerts when deliveries arrive"
+    },
+    {
+      id: 3,
+      title: "Seller Messages",
+      text: "Get notified of new messages from sellers"
+    },
+    {
+      id: 4,
+      title: "Promotional Offers",
+      text: "Receive special deals and promotions"
+    },
+    {
+      id: 5,
+      title: "Email Notifications",
+      text: "Receive updates via email"
+    },
+    {
+      id: 6,
+      title: "SMS Alerts",
+      text: "Receive urgent updates via SMS"
+    },
+  ]
+
   return (
     <DashboardLayout>
       <div className="w-full">
@@ -172,7 +206,7 @@ const Settings = () => {
                   </button>
                 </form>
 
-                <div className="h-[2px] w-full bg-gray-300"></div>
+                <div className="h-[2px] mt-[74px] w-full bg-gray-300"></div>
               </div>
             </div>
           )}
@@ -267,12 +301,51 @@ const Settings = () => {
 
                 </div>
               </form>
+              <button className="bg-green-500 w-full rounded-md mt-10 flex items-center text-white justify-center h-[50px]">
+                  Update Password
+                </button>
+
+                <div className="h-[2px] mt-[98px] w-full bg-gray-300"></div>
               </div>
             )}
           </div>
 
           {/* Notification */}
-          {active === "Notifications" && <div>Notification</div>}
+          <div>
+          {active === "Notifications" && (
+            <div>
+              {notifications.map((items,index) => (
+                <div key={index} className="bg-white rounded-lg px-6 py-8 mb-[11px]">
+                  <div className="flex items-center justify-between">
+                    <div>
+                    <p className="text-[20px] font-light mb-[18px] ">{items.label}</p>
+                    <p className="font-normal text-[18px] text-gray-700 mb-2">{items.title}</p>
+                    <p className="font-light text-base text-gray-600">{items.text}</p>
+                    </div>
+                    <div className=" cursor-pointer">
+                      {/* Hidden native checkbox */}
+                      <input type="checkbox" className="peer hidden" />
+
+                      {/* custom checkbox */}
+                      <div className="w-7 h-7 border-2 border-gray-400rounded-sm peer-checked:bg-green-500 peer-checked:border-green-500 flex items-center justify-center">
+                        {/* tick mark */}
+                        <svg className=" w-3 h-3 text-white hidden peer-checked:block" fill="none" stroke="currentColor" stroke-width="2" viewBox=" 0 0 24 24">
+                          <patch stroke-linecap="roundup" stroke-linejoin="round" d="M5 1314 4L19 7" />
+                        </svg>
+                        {/* <span className="select-none text-gray-700">Accept Terms</span> */}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+              <button className="bg-green-500 w-full rounded-md mt-10 flex items-center text-white justify-center h-[50px]">
+                  Update Preference
+                </button>
+
+                <div className="h-[2px] mt-[35px] w-full bg-gray-300"></div>
+            </div>
+          )}
+          </div>
         </div>
       </div>
     </DashboardLayout>

@@ -1,18 +1,21 @@
 import React from "react";
-import DashboardLayout from "../components/DashboardLayout";
-import BagIcon from "../../../../Components/iconComponent/BagIcon";
-import NewCartIcon from "../../../../Components/iconComponent/NewCartIcon";
-import DeliveryIcon from "../../../../Components/iconComponent/DeliveryIcon";
-import TimeDeliveryIcon from "../../../../Components/iconComponent/TimeDeliveryIcon";
-import Tomato from "../../../../assets/images/Tomatoes.webp";
-import Maize from "../../../../assets/images/Maize.webp";
-import Banana from "../../../../assets/images/Banana.webp";
-import Apple from "../../../../assets/images/Apple.webp";
-import StarIcon from "../../../../Components/iconComponent/StarIcon"
-import ViewStore from "../../../../Components/Buttons/ViewStore";
+import DashboardLayout from "../../components/DashboardLayout";
+import BagIcon from "../../../../../Components/iconComponent/BagIcon";
+import NewCartIcon from "../../../../../Components/iconComponent/NewCartIcon";
+import DeliveryIcon from "../../../../../Components/iconComponent/DeliveryIcon";
+import TimeDeliveryIcon from "../../../../../Components/iconComponent/TimeDeliveryIcon";
+import Tomato from "../../../../../assets/images/Tomatoes.webp";
+import Maize from "../../../../../assets/images/Maize.webp";
+import Banana from "../../../../../assets/images/Banana.webp";
+import Apple from "../../../../../assets/images/Apple.webp";
+import StarIcon from "../../../../../Components/iconComponent/StarIcon"
+import ViewStore from "../../../../../Components/Buttons/ViewStore";
 import { EyeClosed } from "lucide-react";
+import CompleteVerification from "./CompleteVerification";
+import { useState } from "react";
 
 const Dashboard = () => {
+  const [modal,setModal]=useState(false)
   {
     /* Cards */
   }
@@ -64,7 +67,7 @@ const Dashboard = () => {
       price: "₦15,500",
       status: "In Transit",
       statusColor: "bg-yellow-100 text-yellow-700",
-      progress: 60,
+      progress: 20,
       eta1: "Estimated Delivery",
       eta: "2 days",
       image: Maize,
@@ -77,7 +80,7 @@ const Dashboard = () => {
       price: "₦15,500",
       status: "In Transit",
       statusColor: "bg-yellow-100 text-yellow-700",
-      progress: 60,
+      progress: 90,
       eta1: "Estimated Delivery",
       eta: "2 days",
       image: Banana,
@@ -90,7 +93,7 @@ const Dashboard = () => {
       price: "₦15,500",
       status: "In Transit",
       statusColor: "bg-yellow-100 text-yellow-700",
-      progress: 60,
+      progress: 100,
       eta1: "Estimated Delivery",
       eta: "2 days",
       image: Apple,
@@ -123,6 +126,7 @@ const Dashboard = () => {
 
   return (
     <DashboardLayout className="relative">
+      <CompleteVerification open={modal} onClose={()=>setModal(false)}/>
       {/* Text */}
       <div>
       <div>
@@ -157,7 +161,7 @@ const Dashboard = () => {
             <h2 className="text-2xl font-normal leading-[100%] text-black">
               Your Active Orders
             </h2>
-            <p className="text-green-400 font-normal text-[16px]">View All</p>
+            <p onClick={() => setModal(true)} className="text-green-400 font-normal text-[16px]">View All</p>
           </div>
 
           {/* Images and other text */}
@@ -190,8 +194,8 @@ const Dashboard = () => {
                     <p> {order.eta} </p>
                     </div>
 
-                    <div className=" ml-39  max-w-[527px] bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-500 h-2 rounded-full " style={{width: "272px"}}></div>
+                    <div className=" ml-39 w-[527px] bg-gray-200 rounded-full h-2">
+                      <div className={`bg-green-500 h-2 rounded-full`} style={{width: order.progress+"%"}}></div>
                     </div>
               </div>
               

@@ -136,7 +136,7 @@ const DashboardLayout = ({ children }) => {
       </div>
 
       {/* Header */}
-      <div className="w-[calc(100%-261px)] border-b-[0.2px] border-gray-400 h-22 fixed p-6 top-0 left-[261px] bg-white z-10">
+      <div className="w-[calc(100%-261px)] border-b-[0.2px] border-gray-400 h-22 fixed p-6 top-0 left-[261px] bg-white -z-10">
         <div className="flex justify-end items-center gap-5 h-full">
           {/*  <div className='flex items-center gap-3 w-full max-w-[516px] relative'>
                 <SearchIcon className="absolute h-[55px] left-4 top-1/2 -translate-y-1/2" />
@@ -163,8 +163,8 @@ const DashboardLayout = ({ children }) => {
 
 
       {/* Contents */}
-      <div className="h-screen p-6 overflow-y-auto w-[calc(100%-261px)] fixed top-24 left-[261px] bg-gray-50">
-      <div className="fixed right-2 px-[27.5px] py-[12.5px] bottom-2 border border-gray-300 rounded-full flex gap-2 items-center">
+      <div className="h-screen p-6 overflow-y-auto w-[calc(100%-261px)] fixed top-24 pb-[150px] left-[261px] bg-gray-50">
+      <div className="fixed right-2 px-[27.5px] py-[12.5px] bottom-2 border bg-white border-gray-300 rounded-full flex gap-2 items-center">
         <p className="text-[20px] text-gray-600 font-normal">Support</p>
         <SupportIcon />
         </div>
