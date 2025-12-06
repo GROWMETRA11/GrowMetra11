@@ -4,7 +4,6 @@ import LandingPage from '../pages/landingPage'
 import SignUp from '../pages/auth/SignUp'
 import LoginPage from '../pages/auth/LoginPage'
 import MarketPlacePage from '../pages/marketPlacePage'
-import Dashboard from '../pages/dashboard/famers/screen/Dashboard'
 import MarketPlace from '../pages/dashboard/famers/screen/MarketPlace'
 import Orders from '../pages/dashboard/famers/screen/Orders'
 import Cart from '../pages/dashboard/famers/screen/Cart'
@@ -12,6 +11,7 @@ import Wallet from '../pages/dashboard/famers/screen/Wallet'
 import AboutUs from '../pages/aboutPage/AboutUs'
 import Logout from '../pages/dashboard/famers/screen/Logout'
 import Settings from '../pages/dashboard/famers/screen/settings/Settings'
+import Dashboard from '../pages/dashboard/famers/screen/Dashboard/Dashboard'
 
 
 

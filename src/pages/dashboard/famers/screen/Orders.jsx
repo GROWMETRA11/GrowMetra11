@@ -20,7 +20,7 @@ const OrderItems = [
     price: "₦15,500",
     status: "In Transit",
     statusColor: "bg-yellow-100 text-yellow-700",
-    progress: 60,
+    progress: 30,
     eta1: "Estimated Delivery",
     eta: "2 days",
     image: Tomato,
@@ -34,7 +34,7 @@ const OrderItems = [
     price: "₦15,500",
     status: "In Transit",
     statusColor: "bg-yellow-100 text-yellow-700",
-    progress: 60,
+    progress: 40,
     eta1: "Estimated Delivery",
     eta: "2 days",
     image: Maize,
@@ -48,7 +48,7 @@ const OrderItems = [
     price: "₦15,500",
     status: "In Transit",
     statusColor: "bg-yellow-100 text-yellow-700",
-    progress: 60,
+    progress: 50,
     eta1: "Estimated Delivery",
     eta: "2 days",
     image: Banana,
@@ -134,7 +134,7 @@ const Orders = () => {
                     </div>
 
                     <div className=" ml-39  max-w-[527px] bg-gray-200 rounded-full h-2">
-                      <div className="bg-green-500 h-2 rounded-full " style={{width: "272px"}}></div>
+                      <div className="bg-green-500 h-2 rounded-full " style={{width: order.progress+ "%"}}></div>
                     </div>
               </div>
               
