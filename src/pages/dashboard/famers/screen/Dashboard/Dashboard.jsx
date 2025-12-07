@@ -161,7 +161,7 @@ const Dashboard = () => {
             <h2 className="text-2xl font-normal leading-[100%] text-black">
               Your Active Orders
             </h2>
-            <p onClick={() => setModal(true)} className="text-green-400 font-normal text-[16px]">View All</p>
+            <p onClick={() => setModal(true)} className="text-green-400 font-normal cursor-pointer text-[16px]">View All</p>
           </div>
 
           {/* Images and other text */}
