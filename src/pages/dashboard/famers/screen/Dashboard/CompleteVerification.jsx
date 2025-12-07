@@ -1,7 +1,26 @@
 import React, { useState } from "react";
 import PhoneIcon from "../../../../../Components/iconComponent/PhoneIcon";
+import Location2 from "../../../../../Components/iconComponent/Location2";
+import IdIcon from "../../../../../Components/iconComponent/IdIcon";
+import UploadIcon from "../../../../../Components/iconComponent/UploadIcon";
 
 const CompleteVerification = ({ open, onClose }) => {
+
+  // files selection
+  const [files,setFiles] = useState([])
+  const handleFiles = (selected) => {
+    const arr = Array.from(selected)
+    setFiles(arr)
+  }
+   
+  const handleSubmit = () => {
+    setFiles([])
+
+    document.getElementById("file").value = ""
+  }
+
+
+
   const [step, setStep] = useState(1);
   if (!open) return null;
 
@@ -84,23 +103,21 @@ const CompleteVerification = ({ open, onClose }) => {
             </div>
 
             <div className="bg-[#F8F8F8] px-[17px] py-[54px] flex items-center gap-5">
-              <PhoneIcon />
+              <Location2 />
               <span>
                 <h2 className="inter font-normal text-[24px] text-gray-900 mb-[10px]">
-                  Phone Verification
+                  Delivery Address
                 </h2>
                 <p className="inter font-normal text-[20px] text-gray-600">
-                  Verify your phone number
+                Add your delivery address
                 </p>
               </span>
             </div>
 
             <div className="my-[30px]">
-              <input
-                className="px-6 py-4 w-full border border-gray-400 rounded-lg"
-                type="text"
-                placeholder="+234 (0) 800 000 0000"
-              />
+              <textarea className="px-6 py-[14px] resize-none w-full min-h-[158px] font-normal text-2xl outline-none border border-gray-300 focus:ring-2 focus:ring-green-400 rounded-lg" name="" id="" placeholder="Enter Your Full Address">
+
+              </textarea>
             </div>
 
             <div className="flex items-center gap-[50px]">
@@ -140,23 +157,38 @@ const CompleteVerification = ({ open, onClose }) => {
             </div>
 
             <div className="bg-[#F8F8F8] px-[17px] py-[54px] flex items-center gap-5">
-              <PhoneIcon />
+              <IdIcon />
               <span>
                 <h2 className="inter font-normal text-[24px] text-gray-900 mb-[10px]">
-                  Phone Verification
+                ID Verification
                 </h2>
-                <p className="inter font-normal text-[20px] text-gray-600">
-                  Verify your phone number
+                <p className="inter max-w-[500px] font-normal text-[20px] text-gray-600">
+                Upload your Verified Driver’s License, NIN, or Passport for Verification
                 </p>
               </span>
             </div>
 
-            <div className="my-[30px]">
-              <input
-                className="px-6 py-4 w-full border border-gray-400 rounded-lg"
-                type="text"
-                placeholder="+234 (0) 800 000 0000"
-              />
+            <div className="my-[30px] w-full h-[158px] flex items-center justify-center cursor-pointer rounded-lg border border-gray-400" onClick={() => document.getElementById("file").click()}
+              onDragOver={(e) => e.preventDefault()}
+              onDrop={(e) => {
+                e.preventDefault();
+                handleFiles(e.dataTransfer.files);
+              }}
+              >
+                <input type="file" id="file" placeholder="Choose File" onChange={(e) => handleFiles(e.target.files)} className="hidden" />
+               <div className="flex flex-col items-center justify-center">
+               <p className="font-normal text-2xl text-gray-500 mb-[30px]">Choose File</p>
+               <UploadIcon />
+               </div>
+               {files.map((f,index) => (
+                <div key={index}>
+                  <p>{f.name}</p>
+                  
+                  {files.type && files.startsWith("image/, screenshot/") && (
+                    <img src={URL.createObjectURL(files)} alt="" className="w-32 h-32 object-cover rounded-lg mt-1" />
+                  )}
+                </div>
+               ))}
             </div>
 
             <div className="flex items-center gap-[50px]">
@@ -170,10 +202,11 @@ const CompleteVerification = ({ open, onClose }) => {
                 onClick={() => {
                   setStep(1);
                   onClose();
+                  handleSubmit()
                 }}
                 className="w-full max-w-[338px]  bg-green-500 flex items-center justify-center h-[60px] text-white font-medium text-2xl rounded-lg cursor-pointer hover:bg-green-400 transition-colors duration-300"
               >
-                complete verification
+                Complete Verification
               </button>
             </div>
           </div>
