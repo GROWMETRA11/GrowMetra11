@@ -4,10 +4,11 @@ import LandingPage from '../pages/landingPage'
 import SignUp from '../pages/auth/SignUp'
 import LoginPage from '../pages/auth/LoginPage'
 import MarketPlacePage from '../pages/marketPlacePage'
-import MarketPlace from '../pages/dashboard/famers/screen/MarketPlace'
-import Orders from '../pages/dashboard/famers/screen/Orders'
-import Cart from '../pages/dashboard/famers/screen/Cart'
-import Wallet from '../pages/dashboard/famers/screen/Wallet'
+import MarketPlace from '../pages/dashboard/famers/screen/marketplace/MarketPlace'
+import Orders from '../pages/dashboard/famers/screen/orders/Orders'
+import Cart from '../pages/dashboard/famers/screen/cart/Cart'
+import Wallet from '../pages/dashboard/famers/screen/wallet/Wallet'
+import AddFunds from '../pages/dashboard/famers/screen/wallet/AddFunds'
 import AboutUs from '../pages/aboutPage/AboutUs'
 import Logout from '../pages/dashboard/famers/screen/Logout'
 import Settings from '../pages/dashboard/famers/screen/settings/Settings'
@@ -28,6 +29,7 @@ const AppRoutes = () => {
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/wallet' element={<Wallet/>}/>
+        <Route path='Wallet/addFunds' element={<AddFunds/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/logout' element={<Logout/>}/>
         <Route path='/about' element={<AboutUs/>}/>

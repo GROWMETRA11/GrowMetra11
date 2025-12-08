@@ -1,9 +1,9 @@
 import React from "react";
-import DashboardLayout from "../components/DashboardLayout";
-import DeleteIcon from "../../../../Components/iconComponent/DeleteIcon";
-import tomatoes from "../../../../assets/images/Fresh Tomatoes.png";
-import maize from "../../../../assets/images/Maize.webp";
-import potatoes from "../../../../assets/images/potato.png";
+import DashboardLayout from "../../components/DashboardLayout";
+import DeleteIcon from "../../../../../Components/iconComponent/DeleteIcon";
+import tomatoes from "../../../../../assets/images/Fresh Tomatoes.png";
+import maize from "../../../../../assets/images/Maize.webp";
+import potatoes from "../../../../../assets/images/potato.png";
 
 const Cart = () => {
   const cartItems = [

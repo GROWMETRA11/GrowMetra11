@@ -1,12 +1,12 @@
 import React from "react";
-import DashboardLayout from "../components/DashboardLayout";
-import SearchIcon from "../../../../Components/iconComponent/SearchIcon";
-import tomatoes from "../../../../assets/images/Rectangle 2168.png";
-import corn from "../../../../assets/images/cornImg.png"
-import potatoes from "../../../../assets/images/potato.png";
-import rice from "../../../../assets/images/rice.png";
-import apple from "../../../../assets/images/apples.png";
-import banana from "../../../../assets/images/bananas.png";
+import DashboardLayout from "../../components/DashboardLayout";
+import SearchIcon from "../../../../../Components/iconComponent/SearchIcon";
+import tomatoes from "../../../../../assets/images/Rectangle 2168.png";
+import corn from "../../../../../assets/images/cornImg.png"
+import potatoes from "../../../../../assets/images/potato.png";
+import rice from "../../../../../assets/images/rice.png";
+import apple from "../../../../../assets/images/apples.png";
+import banana from "../../../../../assets/images/bananas.png";
 
 const MarketPlace = () => {
   const products = [

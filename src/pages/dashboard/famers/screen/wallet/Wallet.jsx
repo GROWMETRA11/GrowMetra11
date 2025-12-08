@@ -1,16 +1,20 @@
 import React from 'react'
-import DashboardLayout from '../components/DashboardLayout'
-import WalletIcons from '../../../../Components/iconComponent/WalletIcons'
-import EyeoffIcon from '../../../../Components/iconComponent/EyeoffIcon'
-import SpentIcon from '../../../../Components/iconComponent/SpentIcon'
-import EscrowLock from '../../../../Components/iconComponent/EscrowLock'
-import PlusIcon from '../../../../Components/iconComponent/PlusIcon'
-import WidthdrawFundsIcon from '../../../../Components/iconComponent/WidthdrawFundsIcon'
-import ExportIcon from '../../../../Components/iconComponent/ExportIcon'
-import FilterIcon from '../../../../Components/iconComponent/FilterIcon'
-import Secure from '../../../../Components/iconComponent/Secure'
+import DashboardLayout from '../../components/DashboardLayout'
+import WalletIcons from '../../../../../Components/iconComponent/WalletIcons'
+import EyeoffIcon from '../../../../../Components/iconComponent/EyeoffIcon'
+import SpentIcon from '../../../../../Components/iconComponent/SpentIcon'
+import EscrowLock from '../../../../../Components/iconComponent/EscrowLock'
+import PlusIcon from '../../../../../Components/iconComponent/PlusIcon'
+import WidthdrawFundsIcon from '../../../../../Components/iconComponent/WidthdrawFundsIcon'
+import ExportIcon from '../../../../../Components/iconComponent/ExportIcon'
+import FilterIcon from '../../../../../Components/iconComponent/FilterIcon'
+import Secure from '../../../../../Components/iconComponent/Secure'
+import { Links, useNavigate } from 'react-router-dom'
 
 const Wallet = () => {
+
+  const navigate = useNavigate();
+
 
   const walletCards = [
     {
@@ -115,9 +119,13 @@ const Wallet = () => {
       {/* BUTTONS */}
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[27px] mt-6'>
         {buttons.map((btn, index) => (
-          <button
+          <button onClick={() => {
+            if (btn.text === "Add Funds") {
+              navigate("/wallet/addFunds")
+            }
+          }}
             key={index}
-            className={`${btn.bg} flex items-center justify-center gap-6 rounded-lg py-[10.5px] border border-gray-400`}
+            className={`${btn.bg} flex items-center justify-center gap-6 cursor-pointer rounded-lg py-[10.5px] border border-gray-400`}
           >
             {btn.icon}
             <p>{btn.text}</p>

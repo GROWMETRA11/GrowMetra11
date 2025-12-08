@@ -1,11 +1,11 @@
 import React from 'react'
-import DashboardLayout from '../components/DashboardLayout'
-import FilterIcon from '../../../../Components/iconComponent/FilterIcon'
-import Tomato from "../../../../assets/images/Tomatoes.webp";
-import Maize from "../../../../assets/images/Maize.webp";
-import Banana from "../../../../assets/images/Banana.webp";
-import Apple from "../../../../assets/images/Apple.webp";
-import LocationIcon from '../../../../Components/iconComponent/LocationIcon';
+import DashboardLayout from '../../components/DashboardLayout'
+import FilterIcon from '../../../../../Components/iconComponent/FilterIcon'
+import Tomato from "../../../../../assets/images/Tomatoes.webp";
+import Maize from "../../../../../assets/images/Maize.webp";
+import Banana from "../../../../../assets/images/Banana.webp";
+import Apple from "../../../../../assets/images/Apple.webp";
+import LocationIcon from '../../../../../Components/iconComponent/LocationIcon';
 
 
 

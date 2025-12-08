@@ -5,28 +5,31 @@ import IdIcon from "../../../../../Components/iconComponent/IdIcon";
 import UploadIcon from "../../../../../Components/iconComponent/UploadIcon";
 
 const CompleteVerification = ({ open, onClose }) => {
-
   // files selection
-  const [files,setFiles] = useState([])
+  const [files, setFiles] = useState([]);
+  const [img, setImg] = useState('');
   const handleFiles = (selected) => {
-    const arr = Array.from(selected)
-    setFiles(arr)
-  }
-   
+    const arr = Array.from(selected);
+    setFiles(arr);
+    console.log(arr)
+    setImg(URL.createObjectURL(arr[0]))
+    // blob
+    console.log()
+  };
+
+
   const handleSubmit = () => {
-    setFiles([])
+    setFiles([]);
 
-    document.getElementById("file").value = ""
-  }
-
-
+    document.getElementById("file").value = "";
+  };
 
   const [step, setStep] = useState(1);
   if (!open) return null;
 
   return (
     <section
-      onClick={ onClose}
+      onClick={onClose}
       className="w-full fixed z-10 inset-0 flex items-center justify-center bg-black/50 h-screen"
     >
       <div
@@ -109,15 +112,18 @@ const CompleteVerification = ({ open, onClose }) => {
                   Delivery Address
                 </h2>
                 <p className="inter font-normal text-[20px] text-gray-600">
-                Add your delivery address
+                  Add your delivery address
                 </p>
               </span>
             </div>
 
             <div className="my-[30px]">
-              <textarea className="px-6 py-[14px] resize-none w-full min-h-[158px] font-normal text-2xl outline-none border border-gray-300 focus:ring-2 focus:ring-green-400 rounded-lg" name="" id="" placeholder="Enter Your Full Address">
-
-              </textarea>
+              <textarea
+                className="px-6 py-[14px] resize-none w-full min-h-[158px] font-normal text-2xl outline-none border border-gray-300 focus:ring-2 focus:ring-green-400 rounded-lg"
+                name=""
+                id=""
+                placeholder="Enter Your Full Address"
+              ></textarea>
             </div>
 
             <div className="flex items-center gap-[50px]">
@@ -160,35 +166,55 @@ const CompleteVerification = ({ open, onClose }) => {
               <IdIcon />
               <span>
                 <h2 className="inter font-normal text-[24px] text-gray-900 mb-[10px]">
-                ID Verification
+                  ID Verification
                 </h2>
                 <p className="inter max-w-[500px] font-normal text-[20px] text-gray-600">
-                Upload your Verified Driver’s License, NIN, or Passport for Verification
+                  Upload your Verified Driver’s License, NIN, or Passport for
+                  Verification
                 </p>
               </span>
             </div>
 
-            <div className="my-[30px] w-full h-[158px] flex items-center justify-center cursor-pointer rounded-lg border border-gray-400" onClick={() => document.getElementById("file").click()}
+            <div
+              className="my-[30px] w-full h-[158px] flex items-center justify-center cursor-pointer rounded-lg border border-gray-400"
+              onClick={() => document.getElementById("file").click()}
               onDragOver={(e) => e.preventDefault()}
               onDrop={(e) => {
                 e.preventDefault();
-                handleFiles(e.dataTransfer.files);
+                handleFiles(e.dataTransfer.files[0]);
               }}
-              >
-                <input type="file" id="file" placeholder="Choose File" onChange={(e) => handleFiles(e.target.files)} className="hidden" />
-               <div className="flex flex-col items-center justify-center">
-               <p className="font-normal text-2xl text-gray-500 mb-[30px]">Choose File</p>
-               <UploadIcon />
-               </div>
-               {files.map((f,index) => (
-                <div key={index}>
-                  <p>{f.name}</p>
-                  
-                  {files.type && files.startsWith("image/, screenshot/") && (
-                    <img src={URL.createObjectURL(files)} alt="" className="w-32 h-32 object-cover rounded-lg mt-1" />
-                  )}
+            >
+              
+                <div>
+                  <input
+                    type="file"
+                    id="file"
+                    placeholder="Choose File"
+                    onChange={(e) => handleFiles(e.target.files)}
+                    className="hidden"
+                  />
+
+                  {files.length < 1  && ( <div className="flex flex-col items-center justify-center">
+                    <p className="font-normal text-2xl text-gray-500 mb-[30px]">
+                      Choose File
+                    </p>
+                    <UploadIcon />
+                  </div>)}
                 </div>
-               ))}
+            
+
+              {files.map((f, index) => (
+                <div key={index} className="flex flex-col items-center justify-center">
+                  <p>{f.name}</p>
+ 
+                   <img
+                      src={img}
+                      alt=""
+                      className="w-32 h-32  object-cover rounded-lg mt-1"
+                    />
+                  
+                </div>
+              ))}
             </div>
 
             <div className="flex items-center gap-[50px]">
@@ -202,7 +228,7 @@ const CompleteVerification = ({ open, onClose }) => {
                 onClick={() => {
                   setStep(1);
                   onClose();
-                  handleSubmit()
+                  handleSubmit();
                 }}
                 className="w-full max-w-[338px]  bg-green-500 flex items-center justify-center h-[60px] text-white font-medium text-2xl rounded-lg cursor-pointer hover:bg-green-400 transition-colors duration-300"
               >
