@@ -7,11 +7,10 @@ import SecurityIcon from "../../../../../Components/iconComponent/SecurityIcon";
 import Notification from "../../../../../Components/iconComponent/Notification";
 import Secure from "../../../../../Components/iconComponent/Secure";
 import profile from "../../../../../assets/images/ProfileImg.png";
+import DeliveryMan from "../../../../../assets/images/Delivery service with a man delivering packages.png";
 
 const Settings = () => {
   const [active, setActive] = useState("Personal Info");
-  
-
 
   const tabs = [
     {
@@ -66,31 +65,26 @@ const Settings = () => {
       label: "Notification Preferences",
       title: "Order Updates",
       text: "Get notified when your order status changes",
-      
     },
     {
       id: 2,
       title: "Delivery Alerts",
       text: "Receive alerts when deliveries arrive",
-      
     },
     {
       id: 3,
       title: "Seller Messages",
       text: "Get notified of new messages from sellers",
-      
     },
     {
       id: 4,
       title: "Promotional Offers",
       text: "Receive special deals and promotions",
-      
     },
     {
       id: 5,
       title: "Email Notifications",
       text: "Receive updates via email",
-      
     },
     {
       id: 6,
@@ -263,6 +257,20 @@ const Settings = () => {
                 </button>
 
                 <div className="h-[2px] mt-[187px] w-full bg-gray-300"></div>
+
+                
+               {/*  <div className="flex flex-col items-center justify-center">
+                    <img
+                      src={DeliveryMan}
+                      alt="Delivery Man"
+                      className="w-[309px]"
+                    />
+                    <p>You haven’t added any delivery addresses yet</p>
+
+                    <button className="bg-green-500 text-white w-full h-[50px] flex justify-center items-center rounded-lg text-[20px] font-medium">
+                      Add New Address
+                    </button>
+                  </div> */}
               </div>
             )}
           </div>
@@ -355,18 +363,15 @@ const Settings = () => {
                         </p>
                       </div>
                       <div className=" cursor-pointer">
-                
-                      <input
-                        type="checkbox"
-                        className="size-7 accent-green-600  rounded-md !text-white "
-                      />
-                 
-              
-                </div>
+                        <input
+                          type="checkbox"
+                          className="size-7 accent-green-600  rounded-md !text-white "
+                        />
+                      </div>
                     </div>
                   </div>
                 ))}
-               
+
                 <button className="bg-green-500 w-full rounded-md mt-10 flex items-center text-white justify-center h-[50px]">
                   Update Preference
                 </button>
