@@ -34,10 +34,10 @@ const CompleteVerification = ({ open, onClose }) => {
         {step === 1 && (
           <div>
             <div>
-              <h2 className="inter font-medium text-[22px] sm:text-[28px]">
+              <h2 className="inter font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl">
                 Complete Your Verification
               </h2>
-              <p className="text-[14px] sm:text-[15px] font-light text-gray-800">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light text-gray-800">
                 Verification ensures safer transactions and trusted farmer
                 connections.
               </p>
@@ -52,10 +52,10 @@ const CompleteVerification = ({ open, onClose }) => {
             <div className="bg-[#F8F8F8] px-[17px] py-[30px] sm:py-[54px] flex gap-5 flex-wrap sm:flex-nowrap">
               <PhoneIcon />
               <span>
-                <h2 className="inter font-normal text-[20px] sm:text-[24px] text-gray-900 mb-[10px]">
+                <h2 className="inter font-normal text-base sm:text-lg md:text-xl lg:text-2xl text-gray-900 mb-2">
                   Phone Verification
                 </h2>
-                <p className="inter font-normal text-[16px] sm:text-[20px] text-gray-600">
+                <p className="inter font-normal text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
                   Verify your phone number
                 </p>
               </span>
@@ -63,7 +63,7 @@ const CompleteVerification = ({ open, onClose }) => {
 
             <div className="my-[30px]">
               <input
-                className="px-6 py-4 w-full border border-gray-400 rounded-lg text-base"
+                className="px-6 py-4 w-full border border-gray-400 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl"
                 type="text"
                 placeholder="+234 (0) 800 000 0000"
               />
@@ -71,7 +71,7 @@ const CompleteVerification = ({ open, onClose }) => {
 
             <button
               onClick={() => setStep(2)}
-              className="w-full bg-green-500 h-[55px] sm:h-[60px] text-white font-medium text-xl sm:text-2xl rounded-lg"
+              className="w-full bg-green-500 h-[55px] sm:h-[60px] text-white font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg"
             >
               Next
             </button>
@@ -81,10 +81,10 @@ const CompleteVerification = ({ open, onClose }) => {
         {step === 2 && (
           <div>
             <div>
-              <h2 className="inter font-medium text-[22px] sm:text-[28px]">
+              <h2 className="inter font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl">
                 Complete Your Verification
               </h2>
-              <p className="text-[14px] sm:text-[15px] font-light text-gray-800">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light text-gray-800">
                 Verification ensures safer transactions and trusted farmer
                 connections.
               </p>
@@ -99,10 +99,10 @@ const CompleteVerification = ({ open, onClose }) => {
             <div className="bg-[#F8F8F8] px-[17px] py-[30px] sm:py-[54px] flex gap-5 flex-wrap sm:flex-nowrap">
               <Location2 />
               <span>
-                <h2 className="inter font-normal text-[20px] sm:text-[24px] text-gray-900 mb-[10px]">
+                <h2 className="inter font-normal text-base sm:text-lg md:text-xl lg:text-2xl text-gray-900 mb-2">
                   Delivery Address
                 </h2>
-                <p className="inter font-normal text-[16px] sm:text-[20px] text-gray-600">
+                <p className="inter font-normal text-sm sm:text-base md:text-lg lg:text-xl text-gray-600">
                   Add your delivery address
                 </p>
               </span>
@@ -110,7 +110,7 @@ const CompleteVerification = ({ open, onClose }) => {
 
             <div className="my-[30px]">
               <textarea
-                className="px-6 py-[14px] resize-none w-full min-h-[158px] font-normal text-xl outline-none border border-gray-300 focus:ring-2 focus:ring-green-400 rounded-lg"
+                className="px-6 py-[14px] resize-none w-full min-h-[158px] font-normal text-sm sm:text-base md:text-lg lg:text-xl outline-none border border-gray-300 focus:ring-2 focus:ring-green-400 rounded-lg"
                 placeholder="Enter Your Full Address"
               ></textarea>
             </div>
@@ -118,13 +118,13 @@ const CompleteVerification = ({ open, onClose }) => {
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-[50px]">
               <button
                 onClick={() => setStep(1)}
-                className="w-full sm:max-w-[338px] bg-white h-[55px] sm:h-[60px] border border-gray-400 font-medium text-xl sm:text-2xl rounded-lg"
+                className="w-full sm:max-w-[338px] bg-white h-[55px] sm:h-[60px] border border-gray-400 font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg"
               >
                 Back
               </button>
               <button
                 onClick={() => setStep(3)}
-                className="w-full sm:max-w-[338px] bg-green-500 h-[55px] sm:h-[60px] text-white font-medium text-xl sm:text-2xl rounded-lg"
+                className="w-full sm:max-w-[338px] bg-green-500 h-[55px] sm:h-[60px] text-white font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg"
               >
                 Next
               </button>
@@ -135,10 +135,10 @@ const CompleteVerification = ({ open, onClose }) => {
         {step === 3 && (
           <div>
             <div>
-              <h2 className="inter font-medium text-[22px] sm:text-[28px]">
+              <h2 className="inter font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl">
                 Complete Your Verification
               </h2>
-              <p className="text-[14px] sm:text-[15px] font-light text-gray-800">
+              <p className="text-xs sm:text-sm md:text-base lg:text-lg font-light text-gray-800">
                 Verification ensures safer transactions and trusted farmer
                 connections.
               </p>
@@ -153,10 +153,10 @@ const CompleteVerification = ({ open, onClose }) => {
             <div className="bg-[#F8F8F8] px-[17px] py-[30px] sm:py-[54px] flex gap-5 flex-wrap sm:flex-nowrap">
               <IdIcon />
               <span>
-                <h2 className="inter font-normal text-[20px] sm:text-[24px] text-gray-900 mb-[10px]">
+                <h2 className="inter font-normal text-base sm:text-lg md:text-xl lg:text-2xl text-gray-900 mb-2">
                   ID Verification
                 </h2>
-                <p className="inter font-normal text-[16px] sm:text-[20px] text-gray-600 max-w-[500px]">
+                <p className="inter font-normal text-sm sm:text-base md:text-lg lg:text-xl text-gray-600 max-w-[500px]">
                   Upload your Verified Driver’s License, NIN, or Passport for
                   Verification
                 </p>
@@ -182,7 +182,7 @@ const CompleteVerification = ({ open, onClose }) => {
 
                 {files.length < 1 && (
                   <div className="flex flex-col items-center justify-center">
-                    <p className="font-normal text-xl sm:text-2xl text-gray-500 mb-[30px]">
+                    <p className="font-normal text-lg sm:text-xl md:text-2xl lg:text-3xl text-gray-500 mb-[30px]">
                       Choose File
                     </p>
                     <UploadIcon />
@@ -192,7 +192,7 @@ const CompleteVerification = ({ open, onClose }) => {
 
               {files.map((f, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <p className="text-sm sm:text-base">{f.name}</p>
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg">{f.name}</p>
                   <img
                     src={img}
                     alt=""
@@ -205,7 +205,7 @@ const CompleteVerification = ({ open, onClose }) => {
             <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-[50px]">
               <button
                 onClick={() => setStep(2)}
-                className="w-full sm:max-w-[338px] bg-white h-[55px] sm:h-[60px] border border-gray-400 font-medium text-xl sm:text-2xl rounded-lg"
+                className="w-full sm:max-w-[338px] bg-white h-[55px] sm:h-[60px] border border-gray-400 font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg"
               >
                 Back
               </button>
@@ -215,7 +215,7 @@ const CompleteVerification = ({ open, onClose }) => {
                   onClose();
                   handleSubmit();
                 }}
-                className="w-full sm:max-w-[338px] bg-green-500 h-[55px] sm:h-[60px] text-white font-medium text-xl sm:text-2xl rounded-lg"
+                className="w-full sm:max-w-[338px] bg-green-500 h-[55px] sm:h-[60px] text-white font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl rounded-lg"
               >
                 Complete Verification
               </button>

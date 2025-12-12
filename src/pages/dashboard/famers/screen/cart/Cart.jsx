@@ -41,8 +41,8 @@ const Cart = () => {
 
   return (
     <DashboardLayout>
-      <h2 className="text-[28px] sm:text-[32px] font-normal">Shopping Cart</h2>
-      <p className="text-base font-normal">3 items in your cart.</p>
+      <h2 className="text-2xl sm:text-3xl md:text-[32px] font-normal">Shopping Cart</h2>
+      <p className="text-sm sm:text-base md:text-lg font-normal">3 items in your cart.</p>
 
       {/* WRAPPER */}
       <div className="w-full flex flex-col lg:flex-row gap-6 lg:gap-[41px] mt-6">
@@ -62,13 +62,13 @@ const Cart = () => {
               />
 
               <div className="flex-1 text-center sm:text-left">
-                <p className="font-normal text-base">{item.name}</p>
-                <p className="text-sm text-gray-500">Seller: {item.seller}</p>
-                <p className="text-green-500 font-medium text-[14px] mt-1">
+                <p className="font-normal text-sm sm:text-base md:text-lg">{item.name}</p>
+                <p className="text-xs sm:text-sm text-gray-500">Seller: {item.seller}</p>
+                <p className="text-green-500 font-medium text-xs sm:text-sm md:text-[14px] mt-1">
                   ₦{item.price.toLocaleString()}
                 </p>
 
-                <div className="flex border border-gray-400 w-max mx-auto sm:mx-0 mt-3 font-medium rounded-lg justify-center items-center gap-3 px-4 py-1">
+                <div className="flex border border-gray-400 w-max mx-auto sm:mx-0 mt-3 font-medium rounded-lg justify-center items-center gap-3 px-4 py-1 text-sm sm:text-base">
                   <button>-</button>
                   <span>{item.quantity}</span>
                   <button>+</button>
@@ -85,11 +85,11 @@ const Cart = () => {
         {/* RIGHT — ORDER SUMMARY */}
         <div className="bg-white rounded-lg shadow-md w-full lg:w-[32%] h-fit">
           <div className="bg-white p-4 sm:p-5 rounded-xl shadow-md w-full">
-            <h2 className="font-semibold text-lg mb-5">Order Summary</h2>
+            <h2 className="font-semibold text-base sm:text-lg md:text-xl mb-5">Order Summary</h2>
 
-            <div className="space-y-3">
+            <div className="space-y-3 text-sm sm:text-base md:text-[16px]">
               {summaryData.map((item, index) => (
-                <div key={index} className="flex items-center justify-between text-sm">
+                <div key={index} className="flex items-center justify-between">
                   <p>{item.label}</p>
                   <p className="font-medium">₦{item.amount.toLocaleString()}</p>
                 </div>
@@ -98,7 +98,7 @@ const Cart = () => {
 
             <hr className="my-4" />
 
-            <div className="flex justify-between items-center text-base font-semibold">
+            <div className="flex justify-between items-center text-base sm:text-lg md:text-xl font-semibold">
               <p>Total</p>
               <p className="text-green-600">
                 ₦{summaryData.reduce((a, b) => a + b.amount, 0).toLocaleString()}
@@ -108,18 +108,18 @@ const Cart = () => {
             <input
               type="text"
               placeholder="Promo Code"
-              className="border w-full mt-5 p-3 rounded-md focus:outline-none"
+              className="border w-full mt-5 p-3 rounded-md focus:outline-none text-sm sm:text-base md:text-[16px]"
             />
 
-            <button className="w-full border p-3 rounded-md mt-3">
+            <button className="w-full border p-3 rounded-md mt-3 text-sm sm:text-base md:text-[16px]">
               Apply Code
             </button>
 
-            <button className="w-full bg-green-500 text-white p-3 rounded-md mt-4">
+            <button className="w-full bg-green-500 text-white p-3 rounded-md mt-4 text-sm sm:text-base md:text-[16px]">
               Proceed to Checkout
             </button>
 
-            <button className="w-full border p-3 rounded-md mt-3">
+            <button className="w-full border p-3 rounded-md mt-3 text-sm sm:text-base md:text-[16px]">
               Continue Shopping
             </button>
           </div>

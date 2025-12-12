@@ -69,19 +69,19 @@ const OrderItems = [
 const Orders = () => {
   return (
     <DashboardLayout>
-      <h2 className='text-[28px] sm:text-[32px] font-normal mb-1'>My Orders</h2>
-      <p className='text-sm sm:text-base font-normal mb-6'>Track and manage all your purchases</p>
+      <h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-1'>My Orders</h2>
+      <p className='text-xs sm:text-sm md:text-base lg:text-lg font-normal mb-6'>Track and manage all your purchases</p>
       
       {/* Tabs + Filter */}
-      <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center font-normal text-[16px] sm:text-[20px] gap-4 sm:gap-0'>
+      <div className='flex flex-col sm:flex-row justify-between items-start sm:items-center font-normal text-sm sm:text-base md:text-lg lg:text-xl gap-4 sm:gap-0'>
         <div className='flex flex-wrap items-center gap-4 sm:gap-6'>
-          <p className='text-green-500'>Active Orders(2)</p>
-          <p>Delivered Orders(3)</p>
-          <p>Cancelled Orders(1)</p>
+          <p className='text-green-500 text-sm sm:text-base md:text-lg lg:text-xl'>Active Orders(2)</p>
+          <p className='text-sm sm:text-base md:text-lg lg:text-xl'>Delivered Orders(3)</p>
+          <p className='text-sm sm:text-base md:text-lg lg:text-xl'>Cancelled Orders(1)</p>
         </div>
 
         <div className='flex gap-2 items-center'>
-          <p>Filter</p>
+          <p className='text-sm sm:text-base md:text-lg lg:text-xl'>Filter</p>
           <FilterIcon />
         </div>
       </div>
@@ -104,10 +104,10 @@ const Orders = () => {
 
                 {/* Text Info */}
                 <div className="flex-1 w-full">
-                  <h2 className="text-lg sm:text-xl font-semibold">{order.name}</h2>
-                  <p className="text-sm sm:text-base">Order #{order.id}</p>
+                  <h2 className="text-sm sm:text-base md:text-lg lg:text-xl font-semibold">{order.name}</h2>
+                  <p className="text-xs sm:text-sm md:text-base lg:text-lg">Order #{order.id}</p>
 
-                  <div className="flex flex-wrap gap-3 text-sm mt-1 text-gray-600">
+                  <div className="flex flex-wrap gap-3 text-xs sm:text-sm md:text-base lg:text-lg mt-1 text-gray-600">
                     <p>Seller: {order.seller}</p>
                     <p>Qty: {order.qty}</p>
                     <p className="font-semibold text-black">{order.price}</p>
@@ -116,17 +116,17 @@ const Orders = () => {
 
                 {/* Status + Track Button */}
                 <div className='flex items-center justify-between sm:justify-end w-full sm:w-auto gap-6 sm:gap-10 mt-3 sm:mt-0'>
-                  <span className='text-sm sm:text-base'>{order.status}</span>
+                  <span className='text-xs sm:text-sm md:text-base lg:text-lg'>{order.status}</span>
 
                   <div className='flex items-center gap-2 p-2 bg-green-500 rounded-md text-white cursor-pointer'>
                     <LocationIcon />
-                    <span className='text-[16px] sm:text-[20px]'>{order.view}</span>
+                    <span className='text-xs sm:text-sm md:text-base lg:text-lg'>{order.view}</span>
                   </div>
                 </div>
               </div>
 
               {/* ETA Row */}
-              <div className="flex justify-between mt-3 text-sm sm:text-base">
+              <div className="flex justify-between mt-3 text-xs sm:text-sm md:text-base lg:text-lg">
                 <p>{order.eta1}</p>
                 <p>{order.eta}</p>
               </div>
