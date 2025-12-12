@@ -15,7 +15,7 @@ import SupportIcon from "../../../../Components/iconComponent/SupportIcon";
 const DashboardLayout = ({ children }) => {
   const location = useLocation();
   const active = location.pathname;
-  console.log(active);
+
   const dashBoardLink = [
     {
       title: "Dashboard",
@@ -64,21 +64,82 @@ const DashboardLayout = ({ children }) => {
     },
   ];
 
-  // const isMarketActive = active.split("/")[1].toLowerCase() === "market";
-
   return (
     <section className="h-full">
-      {/* SideBar */}
-      <div className="border-r-[0.2px] flex flex-col border-r-gray-400 shadow-md shadow-[#1B1C1D0] max-w-[261px] w-[261px] bg-white fixed left-0 top-0">
-      
 
-        {/* Links - ADD flex-1 HERE */}
-        <div className="h-screen flex flex-col justify-between overflow-y-auto">
-          <div className=" ">
-              {/* Logo */}
-        <div className="px-[41px] py-6 border-b-[0.2px] border-b-gray-400">
+      {/* Mobile Menu Button */}
+      <div className="md:hidden fixed top-4 left-4 z-50">
+        <button
+          onClick={() =>
+            document.getElementById("mobileSidebar").classList.toggle("hidden")
+          }
+          className="p-3 bg-white shadow rounded-lg border"
+        >
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Sidebar */}
+      <div
+        id="mobileSidebar"
+        className="hidden md:hidden fixed top-0 left-0 h-full w-[220px] bg-white shadow-lg z-40 p-4 overflow-y-auto"
+      >
+        <div className="mb-6">
           <img className="w-[90px]" src={Logo} alt="Logo" />
         </div>
+
+        {dashBoardLink.map((item, index) => (
+          <div key={index} className="px-3 py-2">
+            <Link
+              onClick={() =>
+                document.getElementById("mobileSidebar").classList.add("hidden")
+              }
+              className={`flex gap-3 p-3 rounded-lg ${
+                active.split("/")[1].toLowerCase() === item.title.toLowerCase()
+                  ? "bg-green-500 text-white"
+                  : "text-gray-500"
+              }`}
+              to={item.links}
+            >
+              {item.inActiveIcon}
+              {item.title}
+            </Link>
+          </div>
+        ))}
+
+        <hr className="my-4" />
+
+        {dashBoardLink2.map((item, index) => (
+          <div key={index} className="px-3 py-2">
+            <Link
+              onClick={() =>
+                document.getElementById("mobileSidebar").classList.add("hidden")
+              }
+              className={`flex gap-3 p-3 rounded-lg ${
+                active.split("/")[1].toLowerCase() === item.title.toLowerCase()
+                  ? "bg-green-500 text-white"
+                  : "text-gray-500"
+              }`}
+              to={item.links}
+            >
+              {item.inActiveIcon}
+              {item.title}
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      {/* Desktop Sidebar */}
+      <div className="border-r-[0.2px] flex flex-col border-r-gray-400 shadow-md shadow-[#1B1C1D0]
+      max-w-[261px] w-[261px] bg-white fixed left-0 top-0 hidden md:flex">
+
+        <div className="h-screen flex flex-col justify-between overflow-y-auto">
+          <div>
+            {/* Logo */}
+            <div className="px-[41px] py-6 border-b-[0.2px] border-b-gray-400">
+              <img className="w-[90px]" src={Logo} alt="Logo" />
+            </div>
+
             {dashBoardLink.map((item, index) => (
               <div key={index} className="px-5 py-1 mb-2">
                 <Link
@@ -99,6 +160,7 @@ const DashboardLayout = ({ children }) => {
               </div>
             ))}
           </div>
+
           <div>
             {dashBoardLink2.map((item, index) => (
               <div key={index} className="px-5 py-1 mb-2">
@@ -121,35 +183,13 @@ const DashboardLayout = ({ children }) => {
             ))}
           </div>
         </div>
-
-        {/* Bottom - This will now stick to bottom */}
-        {/*  <div className="border-t-[0.2px] border-t-gray-400 py-4 mt-[7px]">
-            <div className="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-green-100 hover:text-green-500 cursor-pointer rounded-md mx-5">
-                <SettingsIcon />
-                <p>Settings</p>
-            </div>
-            <div className="flex items-center gap-3 px-6 py-3 text-gray-500 hover:bg-green-100 hover:text-green-500 cursor-pointer rounded-md mx-5">
-                <LogoutIcon />
-                <p>Log out</p>
-            </div>
-       </div> */}
       </div>
 
       {/* Header */}
-      <div className="w-[calc(100%-261px)] border-b-[0.2px] border-gray-400 h-22 fixed p-6 top-0 left-[261px] bg-white -z-10">
+      <div className="md:w-[calc(100%-261px)] w-full 
+      md:left-[261px] left-0
+      border-b-[0.2px] border-gray-400 h-22 fixed p-6 top-0 bg-white z-10">
         <div className="flex justify-end items-center gap-5 h-full">
-          {/*  <div className='flex items-center gap-3 w-full max-w-[516px] relative'>
-                <SearchIcon className="absolute h-[55px] left-4 top-1/2 -translate-y-1/2" />
-                <input 
-                    className='w-full max-w-[516px] pl-[47px] pr-4 py-[15px] border border-gray-400 rounded-lg outline-none' 
-                    type="text" 
-                    placeholder='Search Products, sellers...' 
-                />
-            </div>
-            <div className='flex items-center gap-5'>
-                <NotificationIcon className="px-3" />
-                <img className='w-10 h-10 rounded-full object-cover' src={ProfileIcon} alt="ProfileIcon" />
-            </div> */}
           <div className="flex items-center gap-5">
             <NotificationIcon className="px-3" />
             <img
@@ -161,13 +201,18 @@ const DashboardLayout = ({ children }) => {
         </div>
       </div>
 
-
       {/* Contents */}
-      <div className="h-screen p-6 overflow-y-auto w-[calc(100%-261px)] fixed top-24 pb-[150px] left-[261px] bg-gray-50">
-      <div className="fixed right-2 px-[27.5px] py-[12.5px] bottom-2 border bg-white border-gray-300 rounded-full flex gap-2 items-center">
-        <p className="text-[20px] text-gray-600 font-normal">Support</p>
-        <SupportIcon />
+      <div
+        className="h-screen p-6 overflow-y-auto 
+      md:w-[calc(100%-261px)] w-full
+      fixed top-24 md:left-[261px] left-0 
+      pb-[150px] bg-gray-50"
+      >
+        <div className="fixed right-2 px-[27.5px] py-[12.5px] bottom-2 border bg-white border-gray-300 rounded-full flex gap-2 items-center">
+          <p className="text-[20px] text-gray-600 font-normal">Support</p>
+          <SupportIcon />
         </div>
+
         {children}
       </div>
     </section>
