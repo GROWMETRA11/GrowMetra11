@@ -86,8 +86,8 @@ const Dashboard = () => {
 
       {/* Welcome */}
       <div>
-        <h2 className="font-normal text-3xl">Welcome, Abdurrahman.</h2>
-        <p className="text-[16px] font-normal mt-1">
+        <h2 className="font-normal text-2xl sm:text-3xl md:text-4xl">Welcome, Abdurrahman.</h2>
+        <p className="text-sm sm:text-base md:text-lg font-normal mt-1">
           Your personalized marketplace dashboard
         </p>
       </div>
@@ -97,8 +97,8 @@ const Dashboard = () => {
         {Cards.map((card, index) => (
           <div key={index} className="p-6 bg-white rounded-lg shadow-md">
             <div>{card.icon}</div>
-            <div className="mt-5 mb-4 text-[15px]">{card.text}</div>
-            <div className="text-[32px] font-medium">{card.values}</div>
+            <div className="mt-5 mb-4 text-sm sm:text-base md:text-lg">{card.text}</div>
+            <div className="text-xl sm:text-2xl md:text-3xl font-medium">{card.values}</div>
           </div>
         ))}
       </div>
@@ -109,10 +109,10 @@ const Dashboard = () => {
         {/* Left */}
         <div className="w-full lg:w-[65%]">
           <div className="flex justify-between">
-            <h2 className="text-2xl">Your Active Orders</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl">Your Active Orders</h2>
             <p
               onClick={() => setModal(true)}
-              className="text-green-400 cursor-pointer"
+              className="text-green-400 cursor-pointer text-sm sm:text-base md:text-lg"
             >
               View All
             </p>
@@ -129,20 +129,20 @@ const Dashboard = () => {
                   />
 
                   <div className="flex-1">
-                    <h2 className="text-lg font-semibold">{order.name}</h2>
-                    <p>Order #{order.id}</p>
+                    <h2 className="text-base sm:text-lg md:text-xl font-semibold">{order.name}</h2>
+                    <p className="text-sm sm:text-base md:text-lg">Order #{order.id}</p>
 
-                    <div className="flex gap-3 text-sm mt-1 text-gray-600 flex-wrap">
+                    <div className="flex gap-3 text-xs sm:text-sm md:text-base mt-1 text-gray-600 flex-wrap">
                       <p>Seller: {order.seller}</p>
                       <p>Qty: {order.qty}</p>
                       <p className="font-semibold text-black">{order.price}</p>
                     </div>
                   </div>
 
-                  <span className="text-sm">{order.status}</span>
+                  <span className="text-xs sm:text-sm md:text-base">{order.status}</span>
                 </div>
 
-                <div className="mt-3 flex justify-between text-sm px-1">
+                <div className="mt-3 flex justify-between text-xs sm:text-sm md:text-base px-1">
                   <p>{order.eta1}</p>
                   <p>{order.eta}</p>
                 </div>
@@ -161,72 +161,72 @@ const Dashboard = () => {
         {/* Right */}
         <div className="w-full lg:w-[32%]">
           <div className="p-6 bg-white rounded-lg">
-            <h2 className="mb-4">Recent Activity</h2>
+            <h2 className="mb-4 text-base sm:text-lg md:text-xl">Recent Activity</h2>
 
             {/* Activity Items */}
             <div className="space-y-6">
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                 <div>
-                  <p>Order delivered successfully</p>
-                  <p className="text-sm text-gray-600">2 hours ago</p>
+                  <p className="text-sm sm:text-base md:text-lg">Order delivered successfully</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">2 hours ago</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <p>Seller confirmed your order</p>
-                  <p className="text-sm text-gray-600">5 hours ago</p>
+                  <p className="text-sm sm:text-base md:text-lg">Seller confirmed your order</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">5 hours ago</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
                 <div>
-                  <p>Payment processed</p>
-                  <p className="text-sm text-gray-600">Yesterday</p>
+                  <p className="text-sm sm:text-base md:text-lg">Payment processed</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">Yesterday</p>
                 </div>
               </div>
 
               <div className="flex items-center gap-2">
                 <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 <div>
-                  <p>Order placed</p>
-                  <p className="text-sm text-gray-600">2 days ago</p>
+                  <p className="text-sm sm:text-base md:text-lg">Order placed</p>
+                  <p className="text-xs sm:text-sm md:text-base text-gray-600">2 days ago</p>
                 </div>
               </div>
             </div>
 
             <div className="mt-6">
-              <ViewStore text="Browse Market" className="mb-4" />
+              <ViewStore text="Browse Market" className="mb-4 text-sm sm:text-base md:text-lg" />
               <ViewStore
                 text="View Cart"
-                className="border border-black rounded-lg"
+                className="border border-black rounded-lg text-sm sm:text-base md:text-lg"
               />
             </div>
 
             {/* Wallet */}
             <div className="bg-green-500 p-6 text-white rounded-lg mt-6">
               <div className="flex justify-between mb-3">
-                <p>Available Balance</p>
+                <p className="text-sm sm:text-base md:text-lg">Available Balance</p>
                 <EyeClosed />
               </div>
-              <p className="text-3xl font-medium mb-3">₦28,500</p>
+              <p className="text-2xl sm:text-3xl md:text-4xl font-medium mb-3">₦28,500</p>
               <ViewStore
                 text="Add Funds"
-                className="border border-white bg-transparent rounded-md"
+                className="border border-white bg-transparent rounded-md text-sm sm:text-base md:text-lg"
               />
             </div>
 
             {/* Escrow */}
             <div className="bg-green-500 p-6 text-white rounded-lg mt-4">
               <div className="flex justify-between mb-3">
-                <p>Escrow Summary</p>
+                <p className="text-sm sm:text-base md:text-lg">Escrow Summary</p>
                 <EyeClosed />
               </div>
-              <p className="text-3xl font-medium mb-2">₦12,500</p>
-              <p className="text-sm">
+              <p className="text-2xl sm:text-3xl md:text-4xl font-medium mb-2">₦12,500</p>
+              <p className="text-xs sm:text-sm md:text-base">
                 ₦12,500 currently held in escrow across 3 transactions.
               </p>
             </div>
@@ -236,23 +236,23 @@ const Dashboard = () => {
 
       {/* Top Rated Sellers */}
       <div className="p-6 mt-6">
-        <h2 className="font-bold">Top Rated Sellers</h2>
+        <h2 className="font-bold text-xl sm:text-2xl md:text-3xl">Top Rated Sellers</h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
           {topRated.map((rate, index) => (
             <div key={index} className="py-5 px-6 shadow-lg rounded-lg bg-white">
               <div className="flex justify-between items-center mb-2">
-                <p>{rate.name}</p>
+                <p className="text-sm sm:text-base md:text-lg">{rate.name}</p>
                 <div className="flex items-center gap-2">
-                  <span>{rate.rating}</span>
+                  <span className="text-sm sm:text-base md:text-lg">{rate.rating}</span>
                   <StarIcon />
                 </div>
               </div>
 
-              <p className="mb-2">{rate.text}</p>
-              <p className="mb-3">{rate.review}</p>
+              <p className="mb-2 text-sm sm:text-base md:text-lg">{rate.text}</p>
+              <p className="mb-3 text-sm sm:text-base md:text-lg">{rate.review}</p>
 
-              <ViewStore className="text-base" />
+              <ViewStore className="text-sm sm:text-base md:text-lg" />
             </div>
           ))}
         </div>
@@ -260,8 +260,8 @@ const Dashboard = () => {
 
       {/* Support Button */}
       <div className="flex justify-end p-6">
-        <button className="bg-white rounded-full shadow-md px-4 py-2.5 flex items-center gap-2 border">
-          <span className="font-medium text-gray-700 text-sm">Support</span>
+        <button className="bg-white rounded-full shadow-md px-4 py-2.5 flex items-center gap-2 border text-sm sm:text-base md:text-lg">
+          <span className="font-medium text-gray-700">Support</span>
           <div className="w-7 h-7 bg-blue-500 rounded-full flex items-center justify-center">
             <svg
               className="w-4 h-4 text-white"

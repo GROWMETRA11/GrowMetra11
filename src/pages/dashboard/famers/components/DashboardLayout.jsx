@@ -73,7 +73,7 @@ const DashboardLayout = ({ children }) => {
           onClick={() =>
             document.getElementById("mobileSidebar").classList.toggle("hidden")
           }
-          className="p-3 bg-white shadow rounded-lg border"
+          className="p-3 bg-white shadow rounded-lg border text-sm sm:text-base"
         >
           ☰
         </button>
@@ -94,7 +94,7 @@ const DashboardLayout = ({ children }) => {
               onClick={() =>
                 document.getElementById("mobileSidebar").classList.add("hidden")
               }
-              className={`flex gap-3 p-3 rounded-lg ${
+              className={`flex gap-3 p-3 rounded-lg text-sm sm:text-base ${
                 active.split("/")[1].toLowerCase() === item.title.toLowerCase()
                   ? "bg-green-500 text-white"
                   : "text-gray-500"
@@ -115,7 +115,7 @@ const DashboardLayout = ({ children }) => {
               onClick={() =>
                 document.getElementById("mobileSidebar").classList.add("hidden")
               }
-              className={`flex gap-3 p-3 rounded-lg ${
+              className={`flex gap-3 p-3 rounded-lg text-sm sm:text-base ${
                 active.split("/")[1].toLowerCase() === item.title.toLowerCase()
                   ? "bg-green-500 text-white"
                   : "text-gray-500"
@@ -130,7 +130,7 @@ const DashboardLayout = ({ children }) => {
       </div>
 
       {/* Desktop Sidebar */}
-      <div className="border-r-[0.2px] flex flex-col border-r-gray-400 shadow-md shadow-[#1B1C1D0]
+      <div className="border-r-[0.2px] flex-col border-r-gray-400 shadow-md shadow-[#1B1C1D0]
       max-w-[261px] w-[261px] bg-white fixed left-0 top-0 hidden md:flex">
 
         <div className="h-screen flex flex-col justify-between overflow-y-auto">
@@ -143,7 +143,7 @@ const DashboardLayout = ({ children }) => {
             {dashBoardLink.map((item, index) => (
               <div key={index} className="px-5 py-1 mb-2">
                 <Link
-                  className={`flex gap-3 p-3 items-center font-medium text-[18px] rounded-md ${
+                  className={`flex gap-3 p-3 items-center font-medium rounded-md text-sm sm:text-base md:text-[18px] ${
                     active.split("/")[1].toLowerCase() ===
                     item.title.toLowerCase()
                       ? "bg-green-500 text-white"
@@ -165,7 +165,7 @@ const DashboardLayout = ({ children }) => {
             {dashBoardLink2.map((item, index) => (
               <div key={index} className="px-5 py-1 mb-2">
                 <Link
-                  className={`flex gap-3 p-3 items-center font-medium text-[18px] rounded-md ${
+                  className={`flex gap-3 p-3 items-center font-medium rounded-md text-sm sm:text-base md:text-[18px] ${
                     active.split("/")[1].toLowerCase() ===
                     item.title.toLowerCase()
                       ? "bg-green-500 text-white"
@@ -188,12 +188,12 @@ const DashboardLayout = ({ children }) => {
       {/* Header */}
       <div className="md:w-[calc(100%-261px)] w-full 
       md:left-[261px] left-0
-      border-b-[0.2px] border-gray-400 h-22 fixed p-6 top-0 bg-white z-10">
-        <div className="flex justify-end items-center gap-5 h-full">
-          <div className="flex items-center gap-5">
-            <NotificationIcon className="px-3" />
+      border-b-[0.2px] border-gray-400 h-22 fixed p-4 sm:p-6 top-0 bg-white z-10">
+        <div className="flex justify-end items-center gap-3 sm:gap-5 h-full text-sm sm:text-base md:text-[16px]">
+          <div className="flex items-center gap-3 sm:gap-5">
+            <NotificationIcon className="px-2 sm:px-3" />
             <img
-              className="w-10 h-10 rounded-full object-cover"
+              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover"
               src={ProfileIcon}
               alt="ProfileIcon"
             />
@@ -203,13 +203,13 @@ const DashboardLayout = ({ children }) => {
 
       {/* Contents */}
       <div
-        className="h-screen p-6 overflow-y-auto 
+        className="h-screen p-4 sm:p-6 overflow-y-auto 
       md:w-[calc(100%-261px)] w-full
-      fixed top-24 md:left-[261px] left-0 
-      pb-[150px] bg-gray-50"
+      fixed top-20 md:left-[261px] left-0 
+      pb-[150px] bg-gray-50 text-sm sm:text-base md:text-[16px]"
       >
-        <div className="fixed right-2 px-[27.5px] py-[12.5px] bottom-2 border bg-white border-gray-300 rounded-full flex gap-2 items-center">
-          <p className="text-[20px] text-gray-600 font-normal">Support</p>
+        <div className="fixed right-2 px-3 sm:px-[27.5px] py-2 sm:py-[12.5px] bottom-2 border bg-white border-gray-300 rounded-full flex gap-2 items-center text-sm sm:text-base md:text-[16px]">
+          <p className="text-gray-600 font-normal">Support</p>
           <SupportIcon />
         </div>
 
