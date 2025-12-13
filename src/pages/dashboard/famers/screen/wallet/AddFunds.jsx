@@ -103,7 +103,7 @@ const AddFunds = () => {
                 }
                 setStep(2);
               }}
-              className="bg-green-500 text-white font-medium text-sm sm:text-base md:text-lg lg:text-xl rounded-md h-10 sm:h-12 w-full max-w-full sm:max-w-[700px] flex justify-center items-center"
+              className="bg-green-500 text-white font-medium text-sm sm:text-base md:text-lg lg:text-xl rounded-md h-10  w-full max-w-full sm:max-w-[700px] flex justify-center items-center"
             >
               Continue
             </button>
