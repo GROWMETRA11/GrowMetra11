@@ -1,3 +1,4 @@
+import React from 'react'
 import NotificationIcon from "../../../../Components/iconComponent/NotificationIcon";
 import ProfileIcon from "../../../../assets/images/ProfileImg.png";
 import Logo from "../../../../assets/logos/Growmetra_limited_Logo-removebg-preview 1.svg";
@@ -12,7 +13,8 @@ import SettingsIcon from "../../../../Components/iconComponent/SettingsIcon";
 import LogoutIcon from "../../../../Components/iconComponent/LogoutIcon";
 import SupportIcon from "../../../../Components/iconComponent/SupportIcon";
 
-const DashboardLayout = ({ children }) => {
+const Layout = ({children}) => {
+
   const location = useLocation();
   const active = location.pathname;
 
@@ -21,31 +23,67 @@ const DashboardLayout = ({ children }) => {
       title: "Dashboard",
       activeIcon: <Home color="#FFFFFF" />,
       inActiveIcon: <Home color="#545454" />,
-      links: "/dashboard/farmers",
+      links: "/dashboard/buyers",
     },
     {
-      title: "Marketplace",
+      title: "My Products",
       activeIcon: <MarketIcon color="#FFFFFF" />,
       inActiveIcon: <MarketIcon color="#545454" />,
-      links: "/marketplace",
+      links: "#",
+    },
+    {
+      title: "Add Product",
+      activeIcon: <OrdersIcon color="#FFFFFF" />,
+      inActiveIcon: <OrdersIcon color="#545454" />,
+      links: "#",
+    },
+    {
+      title: "Inventory",
+      activeIcon: <WalletIcon color="#FFFFFF" />,
+      inActiveIcon: <WalletIcon color="#545454" />,
+      links: "#",
     },
     {
       title: "Orders",
-      activeIcon: <OrdersIcon color="#FFFFFF" />,
-      inActiveIcon: <OrdersIcon color="#545454" />,
-      links: "/orders",
+      activeIcon: <Cart color="#FFFFFF" />,
+      inActiveIcon: <Cart color="#545454" />,
+      links: "#",
+    },
+    {
+      title: "Deliveries",
+      activeIcon: <Cart color="#FFFFFF" />,
+      inActiveIcon: <Cart color="#545454" />,
+      links: "#",
     },
     {
       title: "Wallet",
-      activeIcon: <WalletIcon color="#FFFFFF" />,
-      inActiveIcon: <WalletIcon color="#545454" />,
-      links: "/wallet",
-    },
-    {
-      title: "Cart",
       activeIcon: <Cart color="#FFFFFF" />,
       inActiveIcon: <Cart color="#545454" />,
-      links: "/cart",
+      links: "#",
+    },
+    {
+      title: "Farm Profile",
+      activeIcon: <Cart color="#FFFFFF" />,
+      inActiveIcon: <Cart color="#545454" />,
+      links: "#",
+    },
+    {
+      title: "Verification Center",
+      activeIcon: <Cart color="#FFFFFF" />,
+      inActiveIcon: <Cart color="#545454" />,
+      links: "#",
+    },
+    {
+      title: "Analytics",
+      activeIcon: <Cart color="#FFFFFF" />,
+      inActiveIcon: <Cart color="#545454" />,
+      links: "#",
+    },
+    {
+      title: "Settings",
+      activeIcon: <Cart color="#FFFFFF" />,
+      inActiveIcon: <Cart color="#545454" />,
+      links: "#",
     },
   ];
 
@@ -64,8 +102,25 @@ const DashboardLayout = ({ children }) => {
     },
   ];
 
+
+
+
+
+
   return (
-    <section className="h-full">
+    <section className='h-full flex bg-white'>
+
+      {/* <aside className='bg-blue-300 w-[256px] min-h-screen'>
+        Sidebar
+      </aside>
+
+      <main className='flex-1 min-h-screen overflow-y-auto bg-gray-300'>
+        <header className='bg-red-300 h-22'>
+          Header
+        </header>
+        {children}
+      </main> */}
+
 
       {/* Mobile Menu Button */}
       <div className="md:hidden fixed top-4 left-4 z-50">
@@ -203,7 +258,7 @@ const DashboardLayout = ({ children }) => {
 
       {/* Contents */}
       <div
-        className="h-screen p-4 sm:p-6 overflow-y-auto 
+        className="h-screen p-4 sm:p-8 overflow-y-auto 
       md:w-[calc(100%-261px)] w-full
       fixed top-20 md:left-[261px] left-0 
       pb-[150px] bg-gray-50 text-sm sm:text-base md:text-[16px]"
@@ -215,8 +270,10 @@ const DashboardLayout = ({ children }) => {
 
         {children}
       </div>
-    </section>
-  );
-};
+  
 
-export default DashboardLayout;
+    </section> 
+  )
+}
+
+export default Layout

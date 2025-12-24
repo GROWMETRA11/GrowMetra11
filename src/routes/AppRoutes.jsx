@@ -13,6 +13,7 @@ import AboutUs from '../pages/aboutPage/AboutUs'
 import Logout from '../pages/dashboard/famers/screen/Logout'
 import Settings from '../pages/dashboard/famers/screen/settings/Settings'
 import Dashboard from '../pages/dashboard/famers/screen/Dashboard/Dashboard'
+import BuyersDashboard from '../pages/dashboard/buyers/screens/BuyersDashboard'
 
 
 
@@ -24,7 +25,8 @@ const AppRoutes = () => {
         <Route path='/register' element={<SignUp/>}/>
         <Route path='/login' element={<LoginPage/>}/>
         <Route path='/marketPlacePage' element={<MarketPlacePage/>}/>
-        <Route path='/dashboard' element={<Dashboard />}/>
+        <Route path='/dashboard/farmers' element={<Dashboard />}/>
+        <Route path='/dashboard/buyers' element={<BuyersDashboard />}/>
         <Route path='/marketplace' element={<MarketPlace/>}/>
         <Route path='/orders' element={<Orders/>}/>
         <Route path='/cart' element={<Cart/>}/>
