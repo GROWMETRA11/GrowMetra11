@@ -12,7 +12,7 @@ import SettingsIcon from "../../../../Components/iconComponent/SettingsIcon";
 import LogoutIcon from "../../../../Components/iconComponent/LogoutIcon";
 import SupportIcon from "../../../../Components/iconComponent/SupportIcon";
 
-const DashboardLayout = ({ children }) => {
+const DashboardLayout = ({title, children }) => {
   const location = useLocation();
   const active = location.pathname;
 
@@ -27,25 +27,25 @@ const DashboardLayout = ({ children }) => {
       title: "Marketplace",
       activeIcon: <MarketIcon color="#FFFFFF" />,
       inActiveIcon: <MarketIcon color="#545454" />,
-      links: "/marketplace",
+      links: "/dashboard/farmers/marketplace",
     },
     {
       title: "Orders",
       activeIcon: <OrdersIcon color="#FFFFFF" />,
       inActiveIcon: <OrdersIcon color="#545454" />,
-      links: "/orders",
+      links: "/dashboard/farmers/orders",
     },
     {
       title: "Wallet",
       activeIcon: <WalletIcon color="#FFFFFF" />,
       inActiveIcon: <WalletIcon color="#545454" />,
-      links: "/wallet",
+      links: "/dashboard/farmers/wallet",
     },
     {
       title: "Cart",
       activeIcon: <Cart color="#FFFFFF" />,
       inActiveIcon: <Cart color="#545454" />,
-      links: "/cart",
+      links: "/dashboard/farmers/cart",
     },
   ];
 
@@ -95,7 +95,7 @@ const DashboardLayout = ({ children }) => {
                 document.getElementById("mobileSidebar").classList.add("hidden")
               }
               className={`flex gap-3 p-3 rounded-lg text-sm sm:text-base ${
-                active.split("/")[1].toLowerCase() === item.title.toLowerCase()
+                title==item.title 
                   ? "bg-green-500 text-white"
                   : "text-gray-500"
               }`}
@@ -143,16 +143,17 @@ const DashboardLayout = ({ children }) => {
             {dashBoardLink.map((item, index) => (
               <div key={index} className="px-5 py-1 mb-2">
                 <Link
+                onMouseEnter={()=>{
+                  console.log(active.length)
+                }}
                   className={`flex gap-3 p-3 items-center font-medium rounded-md text-sm sm:text-base md:text-[18px] ${
-                    active.split("/")[1].toLowerCase() ===
-                    item.title.toLowerCase()
-                      ? "bg-green-500 text-white"
+                    title==item.title
+                      ? "bg-green-500 text-white" 
                       : "text-gray-500 hover:bg-green-100 hover:text-green-500"
                   }`}
                   to={item.links}
                 >
-                  {active.split("/")[1].toLowerCase() ===
-                  item.title.toLowerCase()
+                  {title==item.title
                     ? item.activeIcon
                     : item.inActiveIcon}
                   {item.title}
@@ -165,16 +166,13 @@ const DashboardLayout = ({ children }) => {
             {dashBoardLink2.map((item, index) => (
               <div key={index} className="px-5 py-1 mb-2">
                 <Link
-                  className={`flex gap-3 p-3 items-center font-medium rounded-md text-sm sm:text-base md:text-[18px] ${
-                    active.split("/")[1].toLowerCase() ===
-                    item.title.toLowerCase()
+                  className={`flex gap-3 p-3 items-center font-medium rounded-md text-sm sm:text-base md:text-[18px] ${title==item.title
                       ? "bg-green-500 text-white"
                       : "text-gray-500 hover:bg-green-100 hover:text-green-500"
                   }`}
                   to={item.links}
                 >
-                  {active.split("/")[1].toLowerCase() ===
-                  item.title.toLowerCase()
+                  {title==item.title
                     ? item.activeIcon
                     : item.inActiveIcon}
                   {item.title}

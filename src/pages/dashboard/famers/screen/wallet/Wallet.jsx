@@ -34,7 +34,7 @@ const Wallet = () => {
   ];
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title='Wallet'>
       <h2 className='font-normal text-2xl sm:text-3xl md:text-4xl lg:text-5xl'>My Wallet</h2>
       <p className='font-normal text-sm sm:text-base md:text-lg lg:text-xl'>Manage your funds and purchases securely</p>
 

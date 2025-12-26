@@ -79,7 +79,7 @@ const MarketPlace = () => {
   ];
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Marketplace">
       <section>
         <div>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl mb-1 font-normal">
