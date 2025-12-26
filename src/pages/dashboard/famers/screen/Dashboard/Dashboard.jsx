@@ -81,7 +81,7 @@ const Dashboard = () => {
   ];
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Dashboard">
       <CompleteVerification open={modal} onClose={() => setModal(false)} />
 
       {/* Welcome */}

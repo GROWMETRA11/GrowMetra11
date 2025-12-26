@@ -68,7 +68,7 @@ const OrderItems = [
 
 const Orders = () => {
   return (
-    <DashboardLayout>
+    <DashboardLayout title="Orders">
       <h2 className='text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal mb-1'>My Orders</h2>
       <p className='text-xs sm:text-sm md:text-base lg:text-lg font-normal mb-6'>Track and manage all your purchases</p>
       

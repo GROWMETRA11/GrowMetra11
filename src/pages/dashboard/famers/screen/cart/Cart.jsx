@@ -40,7 +40,7 @@ const Cart = () => {
   ];
 
   return (
-    <DashboardLayout>
+    <DashboardLayout title='Cart'>
       <h2 className="text-2xl sm:text-3xl md:text-[32px] font-normal">Shopping Cart</h2>
       <p className="text-sm sm:text-base md:text-lg font-normal">3 items in your cart.</p>
 

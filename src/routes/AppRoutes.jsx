@@ -27,11 +27,11 @@ const AppRoutes = () => {
         <Route path='/marketPlacePage' element={<MarketPlacePage/>}/>
         <Route path='/dashboard/farmers' element={<Dashboard />}/>
         <Route path='/dashboard/buyers' element={<BuyersDashboard />}/>
-        <Route path='/marketplace' element={<MarketPlace/>}/>
-        <Route path='/orders' element={<Orders/>}/>
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/wallet' element={<Wallet/>}/>
-        <Route path='Wallet/addFunds' element={<AddFunds/>}/>
+        <Route path='/dashboard/farmers/marketplace' element={<MarketPlace/>}/>
+        <Route path='/dashboard/farmers/orders' element={<Orders/>}/>
+        <Route path='/dashboard/farmers/cart' element={<Cart/>}/>
+        <Route path='/dashboard/farmers/wallet' element={<Wallet/>}/>
+        <Route path='/dashboard/farmers/Wallet/addFunds' element={<AddFunds/>}/>
         <Route path='/settings' element={<Settings/>}/>
         <Route path='/logout' element={<Logout/>}/>
         <Route path='/about' element={<AboutUs/>}/>

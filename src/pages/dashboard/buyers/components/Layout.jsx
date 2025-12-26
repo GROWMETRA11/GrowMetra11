@@ -29,7 +29,7 @@ const Layout = ({children}) => {
       title: "My Products",
       activeIcon: <MarketIcon color="#FFFFFF" />,
       inActiveIcon: <MarketIcon color="#545454" />,
-      links: "#",
+      links: "/Products",
     },
     {
       title: "Add Product",
