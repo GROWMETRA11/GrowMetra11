@@ -14,6 +14,8 @@ import Logout from '../pages/dashboard/famers/screen/Logout'
 import Settings from '../pages/dashboard/famers/screen/settings/Settings'
 import Dashboard from '../pages/dashboard/famers/screen/Dashboard/Dashboard'
 import BuyersDashboard from '../pages/dashboard/buyers/screens/BuyersDashboard'
+import Products from '../pages/dashboard/buyers/screens/Products'
+import AddProducts from '../pages/dashboard/buyers/screens/AddProducts'
 
 
 
@@ -27,6 +29,8 @@ const AppRoutes = () => {
         <Route path='/marketPlacePage' element={<MarketPlacePage/>}/>
         <Route path='/dashboard/farmers' element={<Dashboard />}/>
         <Route path='/dashboard/buyers' element={<BuyersDashboard />}/>
+        <Route path='/dashboard/buyers/products' element={<Products />}/>
+        <Route path='/dashboard/buyers/add-product' element={<AddProducts />}/>
         <Route path='/dashboard/farmers/marketplace' element={<MarketPlace/>}/>
         <Route path='/dashboard/farmers/orders' element={<Orders/>}/>
         <Route path='/dashboard/farmers/cart' element={<Cart/>}/>
