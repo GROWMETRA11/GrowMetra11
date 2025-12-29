@@ -59,7 +59,7 @@ const Products = () => {
       image: SoyaBeans ,
       price: "₦1,200",
       weight: "/kg",
-      status: "Active",
+      status: "paused",
       stock: "500 kg",
       stockIcon: <StockIcon />,
       sales: "120 sold",
@@ -112,10 +112,13 @@ const Products = () => {
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
         {ProductItems.map((items) => (
           <div key={items.desc} className='w-full max-w-[324px] '>
+            <div className='relative'>
             <img src={items.image} alt={items.title} className='w-full h-[200px] object-cover' />
+            <p className={`px-3 py-1 absolute top-[14px] left-3 text-[14px] rounded-full max-w-[70px] text-center ${items.status === "paused" ? "bg-orange-100" : "bg-green-200"}`}>{items.status}</p>
+            </div>
             <div className='p-4 flex justify-between'>
              <div>
-             <p>{items.title}</p>
+             <p className='w-full'>{items.title}</p>
              <p>{items.desc}</p>
              </div>
              <div>{items.price} {items.weight}</div>
@@ -139,10 +142,10 @@ const Products = () => {
             </div>
 
             <div className='flex items-center justify-between gap-2'>
-              <div className=' inline-flex items-center justify-center relative'>
-                <div className='absolute left-9'><EditIcon /></div>
+              <div className=' inline-flex items-center w-full gap-2 rounded-lg bg-green-500 py-3 justify-center'>
+                <div className=''><EditIcon /></div>
               <Btn
-              className='bg-green-500 px-[66.17px] inline-flex items-center justify-center py-3 text-white rounded-lg'
+              className=' inline-flex items-center justify-center  text-white rounded-lg'
               >
                 Edit Product
               </Btn>
