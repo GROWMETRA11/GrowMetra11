@@ -83,14 +83,14 @@ const Products = () => {
         className='text-white inter font-medium text-base bg-green-500 inline-flex justify-center items-center gap-2 px-5 py-3 rounded-lg' 
         >
           <PlusIcon />
-          Add products
+          <p className='font-medium inter text-base'>Add <span className='hidden md:inline-flex'>products</span></p>
         </Btn>
       </div>
       </div>
 
-      <div className='shadow-md border-2 border-gray-300 p-[17px] rounded-lg flex justify-between gap-4 items-center mb-6'>
-        <div className='relative flex gap-[10px] flex-1 items-center'>
-          <input type="text" placeholder='Search Products... ' className='  pl-10 py-[10px] border border-gray-400 rounded w-full ' />
+      <div className='shadow-md border-2 border-[#E5E7EB] p-[17px] rounded-lg flex flex-col md:flex-row justify-between gap-4 items-center mb-6'>
+        <div className='relative flex gap-[10px] flex-1 w-full items-center'>
+          <input type="text" placeholder='Search Products... ' className='bg-[#F8F9FA]  pl-10 py-[10px] text-sm border border-[#E5E7EB] rounded-lg w-full outline-[#E5E7EB] ' />
           <div className='absolute left-3'>
           <SearchIcon  />
           </div>
@@ -99,44 +99,47 @@ const Products = () => {
           <div className='flex gap-2 items-center'>
           <div className='px-[17px]  border border-gray-200 rounded-lg py-[11px] flex items-center justify-center gap-2'>
             <div><FilterIcon /></div>
-            <p>Filter</p>
+            <p className='inter font-medium text-sm text-[#666666]'>Filter</p>
           </div>
-          <div className='px-4  border border-gray-200 rounded-lg py-[11px] text-[14px] flex items-center justify-center gap-2'>
-          <p>All categories</p>
+          <div className='px-4  border border-[#E5E7EB] rounded-lg py-[11px] text-[14px] flex items-center justify-center gap-2'>
+          <p className='inter font-regular text-sm text-[#666666]'>All categories</p>
             <div><ArrowDown /></div>
           </div>
-
           </div>
       </div>
 
-      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+      <div className='grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3 gap-8'>
         {ProductItems.map((items) => (
-          <div key={items.desc} className='w-full max-w-[324px] '>
+          <div key={items.desc} className='w-full mx-auto min-w-[324px] border border-[#E5E7EB] bg-white rounded-lg '>
             <div className='relative'>
-            <img src={items.image} alt={items.title} className='w-full h-[200px] object-cover' />
-            <p className={`px-3 py-1 absolute top-[14px] left-3 text-[14px] rounded-full max-w-[70px] text-center ${items.status === "paused" ? "bg-orange-100" : "bg-green-200"}`}>{items.status}</p>
+            <img src={items.image} alt={items.title} className='w-full h-[200px] object-cover rounded-t-lg' />
+            <p className={`px-3 py-1 absolute top-[14px] left-3 text-xs font-semibold rounded-full max-w-[70px] text-center ${items.status === "paused" ? "bg-amber-100" : "bg-green-200 text-green-900"}`}>{items.status}</p>
             </div>
-            <div className='p-4 flex justify-between'>
+           <div className='p-4'>
+            <div className=' flex justify-between'>
              <div>
-             <p className='w-full'>{items.title}</p>
-             <p>{items.desc}</p>
+             <p className='w-full text-lg font-bold'>{items.title}</p>
+             <p className='inter font-normal text-sm text-[#666666]  '>{items.desc}</p>
              </div>
-             <div>{items.price} {items.weight}</div>
+
+             <div>
+              <p className='manrope font-bold text-lg text-[#4CAF50]'>{items.price}</p> 
+              <p  className='inter font-normal text-xs text-right text-[#666666] '>{items.weight}</p></div>
             </div>
 
-            <div className='flex  gap-3'>
+            <div className=' flex items-center py-[13px]  gap-3 my-4 border-t border-[#E5E7EB] border-b '>
               <div className='flex items-center w-full max-w-[139px] gap-2'>
                 {items.stockIcon}
                 <div>
-                  <p>Stock</p>
-                  <p>{items.stock}</p>
+                  <p className='inter font-normal text-xs text-[#666666]'>Stock</p>
+                  <p className='font-semibold text-sm '>{items.stock}</p>
                 </div>
               </div>
               <div className='flex items-center w-full max-w-[139px]  gap-2'>
                 {items.salesIcon}
                 <div>
-                  <p>Sales</p>
-                  <p>{items.sales}</p>
+                  <p className='inter font-normal text-xs text-[#666666]'>Sales</p>
+                  <p className='font-semibold text-sm '>{items.sales}</p>
                 </div>
               </div>
             </div>
@@ -145,7 +148,7 @@ const Products = () => {
               <div className=' inline-flex items-center w-full gap-2 rounded-lg bg-green-500 py-3 justify-center'>
                 <div className=''><EditIcon /></div>
               <Btn
-              className=' inline-flex items-center justify-center  text-white rounded-lg'
+              className=' inter font-medium text-sm inline-flex items-center justify-center  text-white rounded-lg'
               >
                 Edit Product
               </Btn>
@@ -153,6 +156,7 @@ const Products = () => {
               <div> <EyeOpen /> </div>
             </div>
 
+          </div>
           </div>
         ))}
       </div>
