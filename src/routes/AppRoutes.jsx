@@ -16,6 +16,7 @@ import Dashboard from '../pages/dashboard/famers/screen/Dashboard/Dashboard'
 import BuyersDashboard from '../pages/dashboard/buyers/screens/BuyersDashboard'
 import Products from '../pages/dashboard/buyers/screens/Products'
 import AddProducts from '../pages/dashboard/buyers/screens/AddProducts'
+import Inventory from '../pages/dashboard/buyers/screens/Inventory'
 
 
 
@@ -31,6 +32,7 @@ const AppRoutes = () => {
         <Route path='/dashboard/buyers' element={<BuyersDashboard />}/>
         <Route path='/dashboard/buyers/products' element={<Products />}/>
         <Route path='/dashboard/buyers/add-product' element={<AddProducts />}/>
+        <Route path='/dashboard/buyers/inventory' element={<Inventory />}/>
         <Route path='/dashboard/farmers/marketplace' element={<MarketPlace/>}/>
         <Route path='/dashboard/farmers/orders' element={<Orders/>}/>
         <Route path='/dashboard/farmers/cart' element={<Cart/>}/>

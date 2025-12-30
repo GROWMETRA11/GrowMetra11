@@ -261,8 +261,8 @@ const Layout = ({children}) => {
         className="h-screen p-4 sm:p-8 overflow-y-auto 
       md:w-[calc(100%-261px)] w-full
       fixed top-20 md:left-[261px] left-0 
-      pb-[150px] bg-gray-50 text-sm sm:text-base md:text-[16px]"
-      >
+      !pb-[150px] bg-gray-50 text-sm sm:text-base md:text-[16px]">
+
         <div className="fixed right-2 px-3 sm:px-[27.5px] py-2 sm:py-[12.5px] bottom-2 border bg-white border-gray-300 rounded-full flex gap-2 items-center text-sm sm:text-base md:text-[16px]">
           <p className="text-gray-600 font-normal">Support</p>
           <SupportIcon />
