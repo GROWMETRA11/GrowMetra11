@@ -177,10 +177,10 @@ const Orders = () => {
                   
                   <td className="px-6 py-5 whitespace-nowrap">
                     <div>
-                      <div className="text-sm font-medium text-gray-900">{order.buyer}</div>
+                      <div className="text-sm inter font-medium text-[#1A1A1A]">{order.buyer}</div>
                       <button
                         onClick={() => handleViewContact(order)}
-                        className="text-sm text-[#4CAF50] hover:text-green-800 flex items-center gap-1 mt-1"
+                        className="text-xs font-normal text-[#4CAF50] hover:text-green-800 flex items-center gap-1 mt-1"
                       >
                         {/* <Eye className="w-4 h-4" /> */}
                         View Contact
@@ -190,8 +190,7 @@ const Orders = () => {
                   
                   <td className="px-6 py-5 whitespace-nowrap">
                     <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium ${order.statusColor}`}>
-                      {order.statusIcon}
-                      {order.status}
+                      <p className='inter font-medium text-xs'>{order.status}</p>
                     </div>
                   </td>
                   
