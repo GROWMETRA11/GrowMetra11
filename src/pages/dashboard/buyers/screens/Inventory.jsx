@@ -164,7 +164,7 @@ const Inventory = () => {
       </div>
 
       <div className="overflow-x-auto rounded-xl border border-[#E5E7EB] shadow-md bg-white ">
-        <table className="w-full text-left">
+        <table className="w-full min-w-[900px] text-left">
           <thead className="font-bold text-xs uppercase inter text-[#666666]  bg-[#F0F2F5] px-6 py-4">
             <tr className="">
               <th className="px-6 py-4">Product</th>
@@ -202,7 +202,7 @@ const Inventory = () => {
                     {/* STOCKS */}
                     <td className="">
                         <p className=" inter font-bold text-base ">{item.qty} <span className="inter font-normal text-xs text-[#666666]">{item.unit}</span></p>
-                        <div className="w-32 h-2 bg-gray-200 rounded mt-1">
+                        <div className="w-24  h-2 bg-gray-200 rounded mt-1">
                             <div className="h-full bg-green-500 rounded"
                              style={{width:`${percentage}% `}}></div>
                         </div>
