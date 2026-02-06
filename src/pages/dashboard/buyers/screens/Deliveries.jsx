@@ -11,7 +11,7 @@ const Deliveries = () => {
         </div>
 
         <div className='flex gap-6'>
-        <div className='border border-[#E0E0E0] bg-[#F3F4F6]  rounded-xl p-4 w-full max-w-[688px] '>
+        <div className='border-2 border-[#E0E0E0] bg-[#F3F4F6]  rounded-xl p-4 w-full max-w-[688px] '>
             <div className='flex justify-between items-center  border-b border-[#F3F4F6]'>
                 <div className='flex items-center gap-3'>
                     <DeliveryIcon2 />
@@ -27,8 +27,24 @@ const Deliveries = () => {
             </div>
         </div>
 
-        <div className='p-[21px] flex-1 border border-[#E0E0E0]'>
+        <div className='p-[21px] flex-1 border-2 border-[#E0E0E0] rounded-xl'>
+            <h2>Delivery Performance</h2>
+            <div>
+                <div>
+                    <p>On-time Rate</p>
+                    <p>98%</p>
+                </div>
+                <div className='w-full h-2 bg-[#00C950] rounded-[33554400px]'></div>
 
+                <div>
+                    <p>Total Deliveries</p>
+                    <p>1,245</p>
+                </div>
+                <div>
+                    <p>Avg. Delivery Time</p>
+                    <p>45 mins</p>
+                </div>
+            </div>
         </div>
         </div>
     </Layout>
