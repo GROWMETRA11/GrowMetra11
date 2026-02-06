@@ -189,7 +189,7 @@ const Orders = () => {
                   </td>
                   
                   <td className="px-6 py-5 whitespace-nowrap">
-                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-medium ${order.statusColor}`}>
+                    <div className={`inline-flex items-center gap-2 px-3 py-1.5 rounded-full  ${order.statusColor}`}>
                       <p className='inter font-medium text-xs'>{order.status}</p>
                     </div>
                   </td>
