@@ -10,8 +10,10 @@ const Deliveries = () => {
             <p className='inter font-normal text-base text-[#6A7282]'>Track active shipments and delivery partners.</p>
         </div>
 
-        <div className='flex gap-6'>
-        <div className='border-2 border-[#E0E0E0] bg-[#F3F4F6]  rounded-xl p-4 w-full max-w-[688px] '>
+        
+
+        {/* <div className='flex gap-6 '>
+        <div className=' bg-[#F3F4F6] border-2 border-[#E0E0E0]   rounded-xl p-4 w-full max-w-[688px]'>
             <div className='flex justify-between items-center  border-b border-[#F3F4F6]'>
                 <div className='flex items-center gap-3'>
                     <DeliveryIcon2 />
@@ -27,7 +29,27 @@ const Deliveries = () => {
             </div>
         </div>
 
-        <div className='p-[21px] flex-1 border-2 border-[#E0E0E0] rounded-xl'>
+        <div className='flex-1'>
+        <div className='p-[21px] border-2 border-[#E0E0E0] rounded-xl'>
+            <h2>Delivery Performance</h2>
+            <div>
+                <div>
+                    <p>On-time Rate</p>
+                    <p>98%</p>
+                </div>
+                <div className='w-full h-2 bg-[#00C950] rounded-[33554400px]'></div>
+
+                <div>
+                    <p>Total Deliveries</p>
+                    <p>1,245</p>
+                </div>
+                <div>
+                    <p>Avg. Delivery Time</p>
+                    <p>45 mins</p>
+                </div>
+            </div>
+        </div>
+        <div className='p-[21px] flex-1 mt-4 border-2 border-[#E0E0E0] rounded-xl'>
             <h2>Delivery Performance</h2>
             <div>
                 <div>
@@ -47,6 +69,7 @@ const Deliveries = () => {
             </div>
         </div>
         </div>
+        </div> */}
     </Layout>
   )
 }
